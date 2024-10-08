@@ -1,5 +1,5 @@
 <template>
-  <section class="relative overflow-hidden">
+  <section id="services" class="relative overflow-hidden">
     <div class="container max-w-[1200px] my-20">
         <h2 class="text-4xl md:text-6xl font-extrabold text-center mb-12 relative z-10">
           Services We Offer

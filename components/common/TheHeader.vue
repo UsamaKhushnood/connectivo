@@ -78,9 +78,9 @@ onUnmounted(() => {
 
 const navLinks = ref([
   { text: "Home", href: "/#" },
-  { text: "Services", href: "/#PlatformIntegrations" },
+  { text: "Services", href: "/#services" },
   { text: "Platform Integrations", href: "/#IntegrationsSection" },
-  { text: "Our Process", href: "/#get-started" },
+  { text: "Our Process", href: "/#process" },
   { text: "Our Customers", href: "/#pricing" },
   { text: "Contact", href: "/#contact" },
 ]);
