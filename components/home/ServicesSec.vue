@@ -1,27 +1,33 @@
 <template>
   <section id="services" class="relative overflow-hidden">
-    <div class="container max-w-[1200px] my-20">
-        <h2 class="text-4xl md:text-6xl font-extrabold text-center mb-12 relative z-10">
-          Services We Offer
-        </h2>
+    <div class="container max-w-[1200px]">
+      <h2
+        class="text-4xl md:text-6xl font-extrabold text-center mb-20 relative z-10"
+      >
+        Services We Offer
+      </h2>
       <div class="max-w-[1200px] h-full bg-[url('/block.png')]">
         <div
-          class="absolute inset-0 flex-none overflow-hidden z-2 bg-[radial-gradient(50%_50%_at_50%_50%,rgba(14,15,17,0)_0%,rgb(12_10_9)_100%)]  "
+          class="absolute inset-0 flex-none overflow-hidden z-2 bg-[radial-gradient(50%_50%_at_50%_50%,rgba(14,15,17,0)_0%,rgb(12_10_9)_100%)]"
         ></div>
         <div class="relative">
           <div class="grid grid-cols-3 gap-y-[50px] gap-x-[66px]">
             <div
               v-for="(service, index) in services"
               :key="index"
-              class="border  p-6 bg-background z-10 w-[350px] h-[400px]"
+              class="border p-6 bg-background z-10 w-[350px]"
             >
-              <div class="flex items-center"> 
+              <div class="flex items-center">
                 <h3 class="text-xl font-bold">
                   {{ service.title }}
                 </h3>
               </div>
-              <p class="my-4">{{ service.description }}</p>
-              <Button class="rounded-full gap-2 px-20"
+              <p class="my-3 max-h-16 overflow-hidden text-sm">
+                <!-- {{ service.description }} -->
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Temporibus, in.
+              </p>
+              <Button class="rounded-full w-full gap-2 px-20"
                 >Learn More <ChevronRight size="16"
               /></Button>
             </div>

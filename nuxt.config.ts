@@ -10,7 +10,7 @@ export default defineNuxtConfig({
     classPrefix: "",
     classSuffix: "",
     storage: "localStorage",
-    storageKey: "nuxt-color-mode",
+    storageKey: "site-color-mode",
   },
   shadcn: {
     /**

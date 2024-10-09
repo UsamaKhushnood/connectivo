@@ -1,6 +1,6 @@
 <template>
   <header
-    class="sticky top-2 flex h-16 items-center gap-4 z-20 border container rounded-full mt-2 px-4 bg-[rgb(12_10_9_/_83%)] backdrop-blur-[20px] backdrop-saturate-[180%]"
+    class="sticky top-3 flex p-2 items-center gap-4 z-20 border container rounded-full bg-[rgb(12_10_9_/_83%)] backdrop-blur-[20px] backdrop-saturate-[180%]"
   >
     <div class="container flex items-center justify-between p-0">
       <router-link
@@ -10,7 +10,7 @@
         Connectivo
       </router-link>
       <nav
-        class="flex-1 flex justify-center hidden gap-6 text-lg font-medium md:flex md:flex-row md:gap-5 md:text-sm lg:gap-6"
+        class="flex-1 flex justify-center gap-6 text-lg font-medium md:flex md:flex-row md:gap-5 md:text-sm lg:gap-6"
       >
         <a
           v-for="(link, index) in navLinks"
@@ -51,7 +51,7 @@
         </SheetContent>
       </Sheet>
       <div class="ms-auto">
-        <Button class="rounded-full">Saas Products</Button>
+        <Button class="rounded-full h-9">Saas Products</Button>
       </div>
     </div>
   </header>

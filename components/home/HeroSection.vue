@@ -1,20 +1,24 @@
 <template>
   <div
-    class="text-card-foreground md:min-h-screen flex items-center justify-center"
+    class="text-card-foreground min-h-screen flex items-center justify-center"
   >
     <div
-      class="w-full mx-auto text-center bg-[url('/block.png')] overflow-hidden py-[100px] md:px-20 relative"
+      class="w-full mx-auto text-center bg-[url('/block.png')] overflow-hidden py-[200px] md:px-20 relative"
     >
       <div
         class="absolute inset-0 -mx-[22px] flex-none overflow-hidden z-1 bg-[radial-gradient(50%_50%_at_50%_50%,rgba(14,15,17,0)_0%,rgb(12_10_9)_100%)]"
       ></div>
       <div class="z-2 relative">
-        <div class="container md:grid   md:grid-cols-2">
+        <div class="container md:grid md:grid-cols-2">
           <div class="text-start">
-            <h1 class="text-2xl md:text-6xl font-extrabold md:mb-6 mb-2 leading-tight">
+            <h1
+              class="text-2xl md:text-6xl font-extrabold md:mb-6 mb-2 leading-tight"
+            >
               Connect the dots.
             </h1>
-            <p class="text-lg md:text-2xl text-gray-400 mb-4 md:mb-10 max-w-3xl auto">
+            <p
+              class="text-lg md:text-2xl text-gray-400 mb-4 md:mb-10 max-w-3xl auto"
+            >
               Free up your time by connecting the systems you depend on, by a
               provider you can count on.
             </p>
@@ -24,7 +28,7 @@
               /></Button>
               <Button
                 size="sm"
-                class="rounded-full gap-2 h-7 hover:bg-background hover:underline border-0 mt-4 md:mt-0 "
+                class="rounded-full gap-2 h-7 hover:bg-background hover:underline border-0 mt-4 md:mt-0"
                 variant="outline"
                 >View Custom Software Services <ChevronRight size="16"
               /></Button>
