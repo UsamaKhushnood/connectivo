@@ -1,29 +1,28 @@
 <template>
-  <section id="process" class="container my-20">
+  <section id="process" class="container md:py-[150px]">
     <h2
-      class="text-4xl md:text-6xl font-extrabold mb-12 relative z-10"
+      class="text-center md:text-start text-4xl md:text-6xl font-extrabold relative z-10"
     >
       Our Process
     </h2>
-    <div>
-      <div>
-        <div class="overflow-hidden">
-          <div
-            v-for="(service, index) in services"
-            :key="index"
-            class="border-b py-10"
+
+    <div class="overflow-hidden mt-12">
+      <div
+        v-for="(service, index) in services"
+        :key="index"
+        class="border-b py-10"
+      >
+        <div class="md:flex gap-10">
+          <h1
+            class="text-7xl hidden md:block md:text-9xl font-extrabold text-neutral-700"
           >
-            <div class="flex gap-10">
-              <h1 class="text-9xl font-extrabold text-neutral-700">
-                {{ index + 1 }}.
-              </h1>
-              <div>
-                <h3 class="text-4xl font-bold">{{ service.title }}</h3>
-                <p class="text text-gray-400 mt-6">
-                  {{ service.description }}
-                </p>
-              </div>
-            </div>
+            {{ index + 1 }}.
+          </h1>
+          <div>
+            <h3 class="text-4xl font-bold">{{ service.title }}</h3>
+            <p class="text text-gray-400 mt-6">
+              {{ service.description }}
+            </p>
           </div>
         </div>
       </div>

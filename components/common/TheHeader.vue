@@ -1,7 +1,7 @@
 <template>
   <header
     :class="[
-      'sticky top-3 flex p-2 items-center gap-4 z-20 border container rounded-full backdrop-blur-[20px] backdrop-saturate-[180%] transition-all duration-300',
+      'sticky top-3 flex p-2 items-center gap-4 z-20 md:border container rounded-full backdrop-blur-[20px] backdrop-saturate-[180%] transition-all duration-300',
       isScrolled ? 'bg-[rgb(12_10_9_/_83%)]' : 'bg-transparent',
     ]"
   >
@@ -25,9 +25,9 @@
         </router-link>
       </nav>
       <div class="flex items-center gap-4">
-        <router-link to="/products">
-            <Button class="rounded-full h-9 w-full">Saas Products</Button>
-          </router-link>
+        <router-link class="hidden md:block" to="/products">
+          <Button class="rounded-full h-9 w-full">Saas Products</Button>
+        </router-link>
         <Button
           @click="toggleMobileMenu"
           variant="outline"
@@ -90,7 +90,6 @@
 import { ref, onMounted, onUnmounted } from "vue";
 import { useRouter } from "vue-router";
 import { Icon } from "@iconify/vue";
-import { Button } from "@/components/ui/button";
 
 const router = useRouter();
 const isScrolled = ref(false);
@@ -99,10 +98,9 @@ const mobileMenuOpen = ref(false);
 const navLinks = ref([
   { text: "Home", href: "/" },
   { text: "Services", href: "/#services" },
-  { text: "Platform Integrations", href: "/#IntegrationsSection" },
   { text: "Our Process", href: "/#process" },
-  { text: "Our Customers", href: "/#customer" },
-  { text: "Contact", href: "/#contact" },
+  { text: "Platform Integrations", href: "/#IntegrationsSection" },
+  { text: "Contact", href: "#contact" },
 ]);
 
 const handleScroll = () => {

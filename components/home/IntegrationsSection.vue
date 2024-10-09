@@ -1,6 +1,6 @@
 <template>
-  <section id="IntegrationsSection" class="container my-20">
-    <h1 class="text-2xl md:text-6xl font-extrabold md:mb-6 mb-2 leading-tight">
+  <section id="IntegrationsSection" class="container py-[150px]">
+    <h1 class="text-3xl md:text-6xl font-extrabold mb-6 leading-tight">
       Platform integrations
     </h1>
     <p class="text-gray-400 text-lg">

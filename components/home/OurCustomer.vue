@@ -1,18 +1,9 @@
 <template>
   <div class="container" id="customer">
-    <Separator>
-      <h1
-        class="sm:text-xl md:text-5xl font-extrabold text-white whitespace-nowrap"
-      >
-        A Selection Of Our Customers
-      </h1>
-    </Separator>
-
     <Vue3Marquee
-      class="relative overflow-hidden my-10 py-6 sm:py-8 lg:py-10"
+      class="relative overflow-hidden py-6 sm:py-8 lg:py-10"
+      clone
       :duration="duration"
-      :direction="direction"
-      :pauseOnHover="true"
     >
       <div
         v-for="(company, index) in companies"
@@ -32,7 +23,7 @@
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from "vue";
 import { Vue3Marquee } from "vue3-marquee";
-import { Separator } from "@/components/ui/separator";
+
 const companies = ref([
   { name: "Get Accept" },
   { name: "Collector Bank" },
@@ -40,7 +31,6 @@ const companies = ref([
   { name: "Concito" },
 ]);
 
-const direction = ref("reverse");
 const baseSpeed = 50; // pixels per second
 const speedMultiplier = ref(1);
 
