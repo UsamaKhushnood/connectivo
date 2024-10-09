@@ -1,87 +1,148 @@
 <template>
   <header
-    class="sticky top-3 flex p-2 items-center gap-4 z-20 border container rounded-full bg-[rgb(12_10_9_/_83%)] backdrop-blur-[20px] backdrop-saturate-[180%]"
+    :class="[
+      'sticky top-3 flex p-2 items-center gap-4 z-20 border container rounded-full backdrop-blur-[20px] backdrop-saturate-[180%] transition-all duration-300',
+      isScrolled ? 'bg-[rgb(12_10_9_/_83%)]' : 'bg-transparent',
+    ]"
   >
-    <div class="container flex items-center justify-between p-0">
+    <div class="container flex items-center justify-between p-0 w-full">
       <router-link
         to="/"
-        class="flex items-center gap-2 font-bold ms-4 whitespace-nowrap uppercase"
+        class="flex items-center gap-2 font-bold ms-4 whitespace-nowrap uppercase text-lg md:text-xl"
       >
         Connectivo
       </router-link>
       <nav
-        class="flex-1 flex justify-center gap-6 text-lg font-medium md:flex md:flex-row md:gap-5 md:text-sm lg:gap-6"
+        class="hidden md:flex flex-1 justify-center gap-6 text-lg font-medium md:gap-5 md:text-sm lg:gap-6"
       >
-        <a
+        <router-link
           v-for="(link, index) in navLinks"
           :key="index"
-          :href="link.href"
+          :to="link.href"
           class="text-muted-foreground transition-colors hover:text-foreground"
         >
           {{ link.text }}
-        </a>
+        </router-link>
       </nav>
-      <Sheet>
-        <SheetTrigger as-child>
-          <Button variant="outline" size="icon" class="shrink-0 md:hidden">
-            <Icon
-              icon="radix-icons:hamburger-menu"
-              class="h-[1.2rem] w-[1.2rem]"
-            />
-            <span class="sr-only">Toggle navigation menu</span>
-          </Button>
-        </SheetTrigger>
-        <SheetContent class="rounded-e-xl" side="left">
-          <nav class="grid gap-3 text-lg font-medium">
-            <router-link
-              to="/"
-              class="text-lg font-bold md:text-base whitespace-nowrap mb-10"
-            >
-              Connectivo
-            </router-link>
-            <a
-              v-for="(link, index) in navLinks"
-              :key="index"
-              :href="link.href"
-              class="text-muted-foreground transition-colors hover:text-foreground"
-            >
-              {{ link.text }}
-            </a>
-          </nav>
-        </SheetContent>
-      </Sheet>
-      <div class="ms-auto">
-        <Button class="rounded-full h-9">Saas Products</Button>
+      <div class="flex items-center gap-4">
+        <router-link to="/products">
+            <Button class="rounded-full h-9 w-full">Saas Products</Button>
+          </router-link>
+        <Button
+          @click="toggleMobileMenu"
+          variant="outline"
+          size="icon"
+          class="md:hidden"
+        >
+          <Icon
+            :icon="
+              mobileMenuOpen
+                ? 'radix-icons:cross-1'
+                : 'radix-icons:hamburger-menu'
+            "
+            class="h-[1.2rem] w-[1.2rem]"
+          />
+          <span class="sr-only">Toggle navigation menu</span>
+        </Button>
       </div>
     </div>
   </header>
+  <Transition name="slide">
+    <div
+      v-if="mobileMenuOpen"
+      class="fixed inset-0 bg-background z-30 md:hidden"
+    >
+      <div class="flex flex-col h-full p-6">
+        <div class="flex justify-between items-center mb-8">
+          <router-link
+            to="/"
+            class="text-lg font-bold uppercase"
+            @click="closeMobileMenu"
+          >
+            Connectivo
+          </router-link>
+          <Button @click="toggleMobileMenu" variant="outline" size="icon">
+            <Icon icon="radix-icons:cross-1" class="h-[1.2rem] w-[1.2rem]" />
+          </Button>
+        </div>
+        <nav class="flex flex-col gap-6 text-lg font-medium">
+          <router-link
+            v-for="(link, index) in navLinks"
+            :key="index"
+            :to="link.href"
+            class="text-muted-foreground transition-colors hover:text-foreground"
+            @click="closeMobileMenu"
+          >
+            {{ link.text }}
+          </router-link>
+        </nav>
+        <div class="mt-auto">
+          <router-link to="/products">
+            <Button class="rounded-full h-9 w-full">Saas Products</Button>
+          </router-link>
+        </div>
+      </div>
+    </div>
+  </Transition>
 </template>
 
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
-import { cn } from "@/lib/utils";
+import { useRouter } from "vue-router";
 import { Icon } from "@iconify/vue";
+import { Button } from "@/components/ui/button";
 
+const router = useRouter();
 const isScrolled = ref(false);
+const mobileMenuOpen = ref(false);
+
+const navLinks = ref([
+  { text: "Home", href: "/" },
+  { text: "Services", href: "/#services" },
+  { text: "Platform Integrations", href: "/#IntegrationsSection" },
+  { text: "Our Process", href: "/#process" },
+  { text: "Our Customers", href: "/#customer" },
+  { text: "Contact", href: "/#contact" },
+]);
 
 const handleScroll = () => {
   isScrolled.value = window.scrollY > 50;
 };
 
+const toggleMobileMenu = () => {
+  mobileMenuOpen.value = !mobileMenuOpen.value;
+  if (mobileMenuOpen.value) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "";
+  }
+};
+
+const closeMobileMenu = () => {
+  mobileMenuOpen.value = false;
+  document.body.style.overflow = "";
+};
+
 onMounted(() => {
   window.addEventListener("scroll", handleScroll);
+  router.afterEach(() => {
+    closeMobileMenu();
+  });
 });
 
 onUnmounted(() => {
   window.removeEventListener("scroll", handleScroll);
 });
-
-const navLinks = ref([
-  { text: "Home", href: "/#" },
-  { text: "Services", href: "/#services" },
-  { text: "Platform Integrations", href: "/#IntegrationsSection" },
-  { text: "Our Process", href: "/#process" },
-  { text: "Our Customers", href: "/#pricing" },
-  { text: "Contact", href: "/#contact" },
-]);
 </script>
+
+<style scoped>
+.slide-enter-active,
+.slide-leave-active {
+  transition: transform 0.3s ease;
+}
+
+.slide-enter-from,
+.slide-leave-to {
+  transform: translateX(-100%);
+}
+</style>

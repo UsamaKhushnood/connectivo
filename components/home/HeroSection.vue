@@ -23,15 +23,19 @@
               provider you can count on.
             </p>
             <div class="md:space-x-4">
-              <Button size="sm" class="rounded-full gap-2 h-7"
-                >View Saas Products <ChevronRight size="16"
-              /></Button>
-              <Button
-                size="sm"
-                class="rounded-full gap-2 h-7 hover:bg-background hover:underline border-0 mt-4 md:mt-0"
-                variant="outline"
-                >View Custom Software Services <ChevronRight size="16"
-              /></Button>
+              <router-link to="/products">
+                <Button size="sm" class="rounded-full gap-2 h-7"
+                  >View Saas Products <ChevronRight size="16"
+                /></Button>
+              </router-link>
+              <router-link :to="{ path: '/', hash: '#services' }">
+                <Button
+                  size="sm"
+                  class="rounded-full gap-2 h-7 hover:bg-background hover:underline border-0 mt-4 md:mt-0"
+                  variant="outline"
+                  >View Custom Software Services <ChevronRight size="16"
+                /></Button>
+              </router-link>
             </div>
           </div>
           <div class=""></div>
@@ -58,21 +62,5 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
 import { ChevronRight, MessageCircleMore } from "lucide-vue-next";
-const isLoading = ref(false);
-
-const ContactUs = () => {
-  isLoading.value = true;
-  // Simulating an API call or navigation
-  setTimeout(() => {
-    isLoading.value = false;
-    console.log('User clicked "Contact Us"');
-    // Here you would typically navigate to a new page or show a modal
-  }, 1000);
-};
 </script>
-
-<style scoped>
-/* Add any additional styles here if needed */
-</style>

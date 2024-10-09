@@ -12,16 +12,16 @@
         >
           Contact Us
         </h1>
-        <p class="mb-4">
+        <p class="text-gray-400 text-lg">
           Email, call, or complete the form to learn how Connectivo can solve
           your messaging problem.
         </p>
-        <div class="font-bold flex flex-col mb-4">
+        <div class="font-bold flex flex-col my-2">
           <div class="flex items-center mb-2 gap-2">
             <Mail class="text-primary" size="20" />
             <a
               href="mailto:info@connectivo.se"
-              class="font-size-sm-12 font-size-md-18 text-decoration-none"
+              class="font-size-sm-12 font-size-md-18"
             >
               info@connectivo.se</a
             >
@@ -32,16 +32,16 @@
           </div>
         </div>
         <div class="mb-4">
-          <h3 class="font-semibold mb-2">Customer Support</h3>
-          <p>
+          <h3 class="font-bold text-xl mb-1">Customer Support</h3>
+          <p class="text-gray-400 text-lg">
             Our support team is available around the clock to address any
             concerns or queries you may have.
           </p>
         </div>
 
         <div class="mb-4">
-          <h3 class="font-semibold mb-2">Feedback and Suggestions</h3>
-          <p>
+          <h3 class="font-bold text-xl mb-1">Feedback and Suggestions</h3>
+          <p class="text-gray-400 text-lg">
             We value your feedback and are continuously working to improve
             Connectivo. Your input is crucial in shaping the future of
             Connectivo.
@@ -49,10 +49,12 @@
         </div>
 
         <div>
-          <h3 class="font-semibold mb-2">Media Inquiries</h3>
-          <p>
+          <h3 class="font-bold text-xl mb-1">Media Inquiries</h3>
+          <p class="text-gray-400 text-lg">
             For media-related questions or press inquiries, please contact us at
-            <span class="text-primary"> info@connectivo.se </span>
+            <a href="mailto:info@connectivo.se" class="text-primary">
+              info@connectivo.se</a
+            >
           </p>
         </div>
       </div>
