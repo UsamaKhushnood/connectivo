@@ -1,21 +1,20 @@
 <template>
   <header
     :class="[
-      'sticky top-3 flex p-2 items-center gap-4 z-20 md:border container rounded-full backdrop-blur-[20px] backdrop-saturate-[180%] transition-all duration-300',
-      isScrolled ? 'bg-[rgb(12_10_9_/_83%)]' : 'bg-transparent',
+      'sticky top-3 flex p-2 items-center gap-4 z-20 container rounded-full backdrop-blur-[20px] backdrop-saturate-[180%] transition-all duration-300',
+      isScrolled ? 'bg-[rgb(12_10_9_/_83%)] md:border ' : 'bg-transparent',
     ]"
   >
     <div class="container flex items-center justify-between p-0 w-full">
-      <div class="flex gap-2">
-        <img src="/public/logo.png" class=" ms-4" width="40px" />
+      <div class="flex gap-1">
+        <img src="/public/logo.png" class="ms-4" width="40px" />
 
         <router-link
           to="/"
-          class="flex items-center font-bold whitespace-nowrap uppercase text-lg md:text-xl"
+          class="flex items-center font-bold whitespace-nowrap text-lg md:text-xl"
         >
-          Connectivo
+          connectivo
         </router-link>
-        <router-link to="/"> </router-link>
       </div>
 
       <nav
@@ -61,16 +60,16 @@
       <div class="flex flex-col h-full p-6">
         <div class="flex justify-between items-center mb-8">
           <div class="flex gap-2">
-        <img src="/public/logo.png"   width="40px" />
+            <img src="/public/logo.png" width="40px" />
 
-        <router-link
-          to="/"
-          class="flex items-center font-bold whitespace-nowrap uppercase text-lg md:text-xl"
-        >
-          Connectivo
-        </router-link>
-        <router-link to="/"> </router-link>
-      </div>
+            <router-link
+              to="/"
+              class="flex items-center font-bold whitespace-nowrap uppercase text-lg md:text-xl"
+            >
+              Connectivo
+            </router-link>
+            <router-link to="/"> </router-link>
+          </div>
           <Button @click="toggleMobileMenu" variant="outline" size="icon">
             <Icon icon="radix-icons:cross-1" class="h-[1.2rem] w-[1.2rem]" />
           </Button>

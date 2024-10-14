@@ -34,6 +34,21 @@
                 >Learn More <ChevronRight size="16"
               /></Button>
             </div>
+
+            <TheCard>
+              <div class="p-5">
+                <h3 class="text-lg md:text-3xl font-semibold mb-2 capitalize">
+                  Your technology partner for digital solutions.
+                </h3>
+                <p class="text-sm md:text-base">
+                  Connectivo assists SME companies in optimizing, connecting,
+                  and improving their business processes. We are small enough to
+                  see, listen, and care about our customers' success, yet big
+                  enough to engage, push, and deliver software that allows
+                  businesses to reach their target goals.
+                </p>
+              </div>
+            </TheCard>
           </div>
         </div>
       </div>
@@ -44,6 +59,7 @@
 <script setup>
 import { ref } from "vue";
 import { ChevronRight } from "lucide-vue-next";
+import TheCard from "@/components/common/TheCard.vue";
 const services = ref([
   {
     title: "UI/UX Design",
