@@ -6,12 +6,18 @@
     ]"
   >
     <div class="container flex items-center justify-between p-0 w-full">
-      <router-link
-        to="/"
-        class="flex items-center gap-2 font-bold ms-4 whitespace-nowrap uppercase text-lg md:text-xl"
-      >
-        Connectivo
-      </router-link>
+      <div class="flex gap-2">
+        <img src="/public/logo.png" class=" ms-4" width="40px" />
+
+        <router-link
+          to="/"
+          class="flex items-center font-bold whitespace-nowrap uppercase text-lg md:text-xl"
+        >
+          Connectivo
+        </router-link>
+        <router-link to="/"> </router-link>
+      </div>
+
       <nav
         class="hidden md:flex flex-1 justify-center gap-6 text-lg font-medium md:gap-5 md:text-sm lg:gap-6"
       >
@@ -54,13 +60,17 @@
     >
       <div class="flex flex-col h-full p-6">
         <div class="flex justify-between items-center mb-8">
-          <router-link
-            to="/"
-            class="text-lg font-bold uppercase"
-            @click="closeMobileMenu"
-          >
-            Connectivo
-          </router-link>
+          <div class="flex gap-2">
+        <img src="/public/logo.png"   width="40px" />
+
+        <router-link
+          to="/"
+          class="flex items-center font-bold whitespace-nowrap uppercase text-lg md:text-xl"
+        >
+          Connectivo
+        </router-link>
+        <router-link to="/"> </router-link>
+      </div>
           <Button @click="toggleMobileMenu" variant="outline" size="icon">
             <Icon icon="radix-icons:cross-1" class="h-[1.2rem] w-[1.2rem]" />
           </Button>
