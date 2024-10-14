@@ -17,7 +17,7 @@
             <div
               v-for="(service, index) in services"
               :key="index"
-              class="border p-6 bg-background z-10 md:w-[350px] grid grid-rows-subgrid row-span-3 gap-0 items-start min-h-[450px] rounded-3xl"
+              class="border p-6 bg-background z-10 md:w-[350px] grid grid-rows-subgrid row-span-2 gap-0 items-start min-h-[450px] rounded-3xl"
             >
               <div class="flex items-center">
                 <h3 class="text-2xl font-bold">
@@ -25,14 +25,10 @@
                 </h3>
               </div>
               <p
-                class="my-3 min-h-[172px] overflow-hidden text-sm text-gray-400"
+                class="mt-3 min-h-[172px] overflow-hidden text-sm text-gray-400"
               >
                 {{ service.description }}
               </p>
-              <Button
-                class="rounded-full w-full gap-2 px-20 ring ring-primary ring-offset-2"
-                >Learn More <ChevronRight size="16"
-              /></Button>
             </div>
           </div>
         </div>

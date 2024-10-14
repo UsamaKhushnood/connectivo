@@ -1,22 +1,24 @@
 <template>
-  <div class="container" id="customer">
-    <Vue3Marquee
-      class="relative overflow-hidden py-6 sm:py-8 lg:py-10"
-      clone
-      :duration="duration"
-    >
-      <div
-        v-for="(company, index) in companies"
-        :key="index"
-        class="flex items-center"
+  <div class="bg-secondary">
+    <div class="3xl:container" id="customer">
+      <Vue3Marquee
+        class="relative overflow-hidden py-6 sm:py-8 lg:py-6"
+        clone
+        :duration="duration"
       >
-        <h2
-          class="text-2xl sm:text-3xl lg:text-4xl font-normal mr-20 sm:mr-30 lg:mr-40 whitespace-nowrap"
+        <div
+          v-for="(company, index) in companies"
+          :key="index"
+          class="flex items-center"
         >
-          {{ company.name }}
-        </h2>
-      </div>
-    </Vue3Marquee>
+          <h2
+            class="text-xl sm:text-3xl lg:text-3xl font-normal mr-20 sm:mr-30 lg:mr-20 whitespace-nowrap"
+          >
+            {{ company.name }}
+          </h2>
+        </div>
+      </Vue3Marquee>
+    </div>
   </div>
 </template>
 

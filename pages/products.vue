@@ -6,7 +6,7 @@
       class="w-full mx-auto text-center bg-[url('/block.png')] overflow-hidden py-[100px] md:px-20 relative"
     >
       <div
-        class="absolute inset-0 -mx-[22px] flex-none overflow-hidden z-1 bg-[radial-gradient(50%_50%_at_50%_50%,rgba(14,15,17,0)_0%,rgb(12_10_9)_100%)]"
+        class="absolute inset-0 -mx-[22px] flex-none overflow-hidden z-1 bg-[radial-gradient(50%_50%_at_50%_50%,rgba(14,15,17,0)_0%,rgb(2 8 23) 100%)]"
       ></div>
       <div class="z-2 relative">
         <div class="container md:grid md:grid-cols-2">
