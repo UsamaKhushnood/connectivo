@@ -27,7 +27,7 @@
       Free up your time by connecting the systems you depend on, by a provider
       you can count on.
     </p>
-    <div class="flex md:flex-row flex-col md:space-x-4 mb-12">
+    <!-- <div class="flex md:flex-row flex-col md:space-x-4 mb-12">
       <router-link to="/products">
         <Button class="rounded-full">View SaaS Products</Button>
       </router-link>
@@ -39,8 +39,8 @@
           View Custom Software Services <ChevronRight size="16" />
         </Button>
       </router-link>
-    </div>
-    <TheCard class="p-6 rounded-3xl mb-12 max-w-3xl">
+    </div> -->
+    <TheCard class="p-6 rounded-3xl mb-12 max-w-3xl mt-4">
       <h3 class="text-3xl font-semibold mb-2 capitalize">
         Your technology partner for digital solutions.
       </h3>
@@ -51,7 +51,7 @@
         and deliver software that allows businesses to reach their target goals.
       </p>
     </TheCard>
-
+    <!-- 
     <div class="flex flex-wrap justify-center items-center gap-8">
       <img
         v-for="(platform, index) in reviewPlatforms"
@@ -60,7 +60,7 @@
         :alt="platform.name"
         class="h-12 rounded-full cursor-pointer"
       />
-    </div>
+    </div> -->
   </div>
 </template>
 

@@ -108,7 +108,6 @@ const navLinks = ref([
   { text: "Home", href: "/" },
   { text: "Services", href: "/#services" },
   { text: "Our Process", href: "/#process" },
-  { text: "Platform Integrations", href: "/#IntegrationsSection" },
   { text: "Contact", href: "#contact" },
 ]);
 

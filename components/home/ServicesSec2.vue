@@ -1,17 +1,19 @@
 <template>
   <section id="services" class="relative overflow-hidden py-[150px]">
-    <div class="container">
+    <div class="container max-w-[1200px]">
       <h2
         class="text-4xl md:text-6xl font-extrabold text-center mb-10 md:mb-20 relative z-10"
       >
         <span class="text-primary">Services</span> We Offer
       </h2>
-      <div class="h-full bg-[url('/block.png')]">
+      <div class="max-w-[1200px] h-full bg-[url('/block.png')]">
         <div
           class="absolute inset-0 flex-none overflow-hidden z-2 bg-[radial-gradient(50%_50%_at_50%_50%,rgba(14,15,17,0)_0%,rgb(12_10_9)_100%)]"
         ></div>
         <div class="relative group">
-          <div class="flex justify-between">
+          <div
+            class="grid grid-cols-1 md:grid-cols-3 gap-y-[50px] gap-x-[66px]"
+          >
             <div
               class="border p-6 bg-background z-10 md:w-[350px] h-[300px] items-start rounded-3xl"
             >
@@ -65,8 +67,6 @@
                 their company resources sustainably.
               </p>
             </div>
-          </div>
-          <div class="flex justify-between">
             <div
               class="border p-6 bg-background z-10 md:w-[350px] h-[300px] items-start rounded-3xl mt-[-50px]"
             >
