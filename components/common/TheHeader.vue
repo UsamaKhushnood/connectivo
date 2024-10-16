@@ -1,8 +1,8 @@
 <template>
   <header
     :class="[
-      'sticky top-3 flex p-2 items-center gap-4 z-20 container rounded-full backdrop-blur-[20px] backdrop-saturate-[180%] transition-all duration-300',
-      isScrolled ? 'bg-[rgb(12_10_9_/_83%)] md:border ' : 'bg-transparent',
+      'sticky top-3 flex p-2 items-center gap-4 z-20 container rounded-full  transition-all duration-300',
+      isScrolled ? 'bg-[rgb(12_10_9_/_83%)] md:border backdrop-blur-[20px] backdrop-saturate-[180%]' : 'bg-transparent',
     ]"
   >
     <div class="container flex items-center justify-between p-0 w-full">

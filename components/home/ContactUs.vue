@@ -1,17 +1,22 @@
 <template>
-  <section id="contact" class="container pt-0 py-[150px]">
-    <div class="flex flex-col-reverse md:flex-row gap-20 relative">
-      <div class="flex-1 z-10">
-        <h1
-          class="text-4xl mb-2 md:text-6xl font-extrabold md:mb-3 leading-tight"
-        >
-          Contact Us
+  <section
+    id="contact"
+    class="bg-gradient-to-b from-[#0D1117] via-[black] to-[#1E2368]"
+  >
+    <div
+      class="flex flex-col md:flex-row items-center container gap-10 py-8 md:pt-[150px]"
+    >
+      <!-- Left side content -->
+      <div class="md:max-w-xl w-full flex flex-col justify-between">
+        <h1 class="text-4xl sm:text-5xl md:text-7xl font-bold mb-2">
+          Resquest A
+          <span class="text-primary">Free Trial</span>
         </h1>
-        <p class="text-gray-400 md:text-lg">
+        <p class="text-gray-400">
           Email, call, or complete the form to learn how Connectivo can solve
           your messaging problem.
         </p>
-        <div class="flex flex-col mt-5 md:mt-10 text-sm">
+        <div class="flex flex-col my-5 text-sm">
           <div class="flex items-center mb-2 gap-2 text-gray-400">
             <Mail size="16" />
             <a href="mailto:info@connectivo.se"> info@connectivo.se</a>
@@ -21,7 +26,7 @@
             <a href="tel:+0106411212">010-641 12 12</a>
           </div>
         </div>
-        <div class="mt-5 md:mt-10 grid grid-col-1 md:grid-cols-2">
+        <div class="grid grid-col-1 md:grid-cols-2">
           <div class="mb-4">
             <h3 class="font-bold mb-1">Customer Support</h3>
             <p class="text-gray-400 text-xs">
@@ -51,83 +56,82 @@
           </div>
         </div>
       </div>
-
-      <div class="flex-1 z-10 mt-20 md:mt-0">
-        <div class="md:border-l md:ps-20">
-          <h1
-            class="text-4xl mb-2 md:text-6xl font-extrabold md:mb-3 leading-tight"
-          >
-            Get in Touch
-          </h1>
-          <p class="text-gray-400 md:text-lg">You can reach us anytime.</p>
-
-          <form @submit.prevent="submitForm" class="space-y-4 mt-10">
-            <div class="flex gap-4">
-              <div class="w-full">
-                <Input
-                  type="text"
-                  placeholder="First name"
-                  v-model="firstName"
-                  id="name"
-                  required
-                  class="h-12 w-full py-4 px-6 border rounded-full focus:outline-none focus:ring-0 focus:border-transparent"
-                />
-              </div>
-              <div class="w-full">
-                <Input
-                  type="text"
-                  placeholder="Last name"
-                  v-model="lastName"
-                  id="name"
-                  required
-                  class="h-12 w-full py-4 px-6 border rounded-full focus:outline-none focus:ring-0 focus:border-transparent"
-                />
-              </div>
-            </div>
-            <div>
-              <Input
-                type="email"
-                placeholder="Email"
-                id="email"
-                v-model="email"
-                required
-                class="h-12 w-full py-4 px-6 border rounded-full focus:outline-none focus:ring-0 focus:border-transparent"
-              />
-            </div>
-            <Textarea
-              v-model="message"
-              placeholder="How can we help?"
-              rows="5"
-              class="w-full p-4 border rounded-2xl bg-background"
+      <!-- Right side form -->
+      <div class="w-full">
+        <form @submit.prevent="submitForm" class="space-y-6">
+          <div class="grid grid-cols-2 gap-6">
+            <Input
+              v-model="firstName"
+              type="text"
               required
-            ></Textarea>
-            <Button type="submit" class="w-full rounded-full text-xl h-12">
-              Submit
-            </Button>
-          </form>
-        </div>
+              placeholder="First Name"
+              class="form-input placeholder:text-white 400placeholder-red-"
+            />
+            <Input
+              v-model="lastName"
+              type="text"
+              required
+              placeholder="Last Name"
+              class="form-input"
+            />
+          </div>
+          <div class="grid grid-cols-2 gap-6">
+            <Input
+              v-model="email"
+              type="email"
+              required
+              placeholder="Email"
+              class="form-input"
+            />
+            <Input
+              v-model="phoneNumber"
+              type="tel"
+              required
+              placeholder="Phone Number"
+              class="form-input"
+            />
+          </div>
+          <Textarea
+            v-model="message"
+            required
+            placeholder="Type Your Message"
+            rows="6"
+            class="form-input"
+          ></Textarea>
+          <div class="flex items-center justify-between">
+            <div class="flex items-center">
+              <Checkbox class="border-primary" />
+              <Label for="terms" class="ml-2 text-sm"
+                >I agree to the website terms and conditions</Label
+              >
+            </div>
+            <Button type="submit"> Send </Button>
+          </div>
+        </form>
       </div>
     </div>
   </section>
 </template>
+
 <script setup>
 import { ref } from "vue";
-import { Send, Mail, Phone } from "lucide-vue-next";
 
 const firstName = ref("");
 const lastName = ref("");
 const email = ref("");
 const phoneNumber = ref("");
 const message = ref("");
+const agreeToTerms = ref(false);
 
 const submitForm = () => {
   // Handle form submission logic here
-  console.log("Form submitted:", {
-    firstName: firstName.value,
-    lastName: lastName.value,
-    email: email.value,
-    phoneNumber: phoneNumber.value,
-    message: message.value,
+  console.log("Form submitted", {
+    firstName,
+    lastName,
+    email,
+    phoneNumber,
+    message,
+    agreeToTerms,
   });
 };
 </script>

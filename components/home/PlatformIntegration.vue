@@ -1,7 +1,10 @@
 <template>
-  <section id="IntegrationsSection" class="container py-[150px]">
-    <h1 class="text-3xl md:text-6xl font-extrabold mb-6 leading-tight">
-      Platform integrations
+  <section
+    id="IntegrationsSection"
+    class="container p-8 md:py-20  md:my-[150px]"
+  >
+    <h1 class="md:text-7xl text-4xl font-bold mb-20 text-center">
+      Platform <span class="text-primary">Integrations</span>
     </h1>
     <p class="text-gray-400 text-lg">
       Integration Platform as a Service (iPaaS) is a suite of cloud services,
@@ -11,36 +14,25 @@
       other. Popular requested features from our previous clients include
       capabilities for managing, harvesting, and visualizing data.
     </p>
-    <div class="mt-10">
-      <div v-for="(skillGroup, index) in skillGroups" :key="index">
-        <div class="mt-2">
-          <div>
-            <Vue3Marquee
-              class="skills overflow-hidden"
-              :direction="index % 2 === 0 ? 'reverse' : 'normal'"
-            >
-              <div
-                v-for="(skill, skillIndex) in repeatedSkills(skillGroup)"
-                :key="skillIndex"
-                class="flex items-center space-x-4"
-              >
-                <img
-                  v-if="skill.img"
-                  :src="skill.img"
-                  alt=""
-                  class="w-32 mr-40 py-5 filter brightness-150"
-                />
-              </div>
-            </Vue3Marquee>
-          </div>
-        </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-10 mt-10">
+      <div
+        v-for="(skill, index) in skills"
+        :key="index"
+        class="flex items-center justify-center"
+      >
+        <img
+          v-if="skill.img"
+          :src="skill.img"
+          alt="Integration Logo"
+          class="w-32 py-5 filter brightness-150"
+        />
       </div>
     </div>
   </section>
 </template>
 
 <script>
-import { Vue3Marquee } from "vue3-marquee";
 import sap from "/integration/sap.png";
 import odoo from "/integration/odoo.png";
 import shopify from "/integration/shopify.png";
@@ -55,9 +47,6 @@ import visma from "/integration/visma.png";
 import zoho from "/integration/zoho.png";
 
 export default {
-  components: {
-    Vue3Marquee,
-  },
   data() {
     return {
       skills: [
@@ -75,22 +64,6 @@ export default {
         { img: zoho },
       ],
     };
-  },
-  computed: {
-    skillGroups() {
-      const skillsPerGroup = 4;
-      const skillGroups = [];
-      for (let i = 0; i < this.skills.length; i += skillsPerGroup) {
-        skillGroups.push(this.skills.slice(i, i + skillsPerGroup));
-      }
-      return skillGroups;
-    },
-  },
-  methods: {
-    repeatedSkills(skillGroup) {
-      // Repeat the skills for seamless scrolling
-      return [...skillGroup, ...skillGroup]; // Duplicate the group
-    },
   },
 };
 </script>

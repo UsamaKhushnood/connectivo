@@ -6,10 +6,10 @@
       >
         <span class="text-primary">Services</span> We Offer
       </h2>
-      <div class="max-w-[1200px] h-full bg-[url('/block.png')]">
-        <div
+      <div class="max-w-[1200px] h-full ">
+        <!-- <div
           class="absolute inset-0 flex-none overflow-hidden z-2 bg-[radial-gradient(50%_50%_at_50%_50%,rgba(14,15,17,0)_0%,rgb(12_10_9)_100%)]"
-        ></div>
+        ></div> -->
         <div class="relative group">
           <div
             class="grid grid-cols-1 md:grid-cols-3 gap-y-[50px] gap-x-[66px]"

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p class="text-xs text-center text-gray-400 py-2 border-t">
+    <p class="text-xs text-center bg-[#1E2368] py-2 border-t border-gray-800">
       Connectivo AB &copy;
       {{ new Date().getFullYear() }}
       All rights reserved.
