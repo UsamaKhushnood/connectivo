@@ -13,7 +13,7 @@
           to="/"
           class="flex items-center font-bold whitespace-nowrap text-lg md:text-xl"
         >
-          connectivo
+          Connectivo
         </router-link>
       </div>
 

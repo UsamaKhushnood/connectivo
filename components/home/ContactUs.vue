@@ -1,148 +1,116 @@
 <template>
-  <section id="contact" class="relative overflow-hidden">
-    <!-- Skewed Background Gradient -->
+  <div id="contact" class="container p-4 md:pb-[60px] md:pt-[150px]">
     <div
-      class="absolute inset-0 -z-10 transform skew-y-6 origin-top-left"
-      style="background: linear-gradient(to bottom, #0d1117, black, #1e2368)"
-    ></div>
-
-    <div
-      class="flex flex-col md:flex-row items-center container gap-10 py-8 md:pt-[250px]"
+      class="bg-gradient-to-br from-green-900 to-black rounded-2xl overflow-hidden backdrop-blur-sm"
     >
-      <!-- Left side content -->
-      <div class="md:max-w-xl w-full flex flex-col justify-between">
-        <h1 class="text-4xl sm:text-5xl md:text-7xl font-bold mb-2">
-          Request A <span class="text-primary">Free Trial</span>
-        </h1>
-        <p class="text-gray-400">
-          Email, call, or complete the form to learn how Connectivo can solve
-          your messaging problem.
-        </p>
-        <div class="flex flex-col my-5 text-sm">
-          <div class="flex items-center mb-2 gap-2 text-gray-400">
-            <Mail size="16" />
-            <a href="mailto:info@connectivo.se"> info@connectivo.se</a>
-          </div>
-          <div class="flex gap-2 text-gray-400">
-            <Phone size="16" />
-            <a href="tel:+0106411212">010-641 12 12</a>
-          </div>
-        </div>
-        <div class="grid grid-col-1 md:grid-cols-2">
-          <div class="mb-4">
-            <h3 class="font-bold mb-1">Customer Support</h3>
-            <p class="text-gray-400 text-xs">
-              Our support team is available around the clock to address any
-              concerns or queries you may have.
-            </p>
-          </div>
-          <div class="mb-4">
-            <h3 class="font-bold mb-1">Feedback and Suggestions</h3>
-            <p class="text-gray-400 text-xs">
-              We value your feedback and are continuously working to improve
-              Connectivo. Your input is crucial in shaping the future of
-              Connectivo.
-            </p>
-          </div>
-          <div>
-            <h3 class="font-bold mb-1">Media Inquiries</h3>
-            <p class="text-gray-400 text-xs">
-              For media-related questions or press inquiries, please contact us
-              at
-              <a href="mailto:info@connectivo.se" class="text-primary">
-                info@connectivo.se
-              </a>
-            </p>
+      <div class="flex p-10">
+        <!-- Left side with title and description -->
+        <div class="w-2/5">
+          <h1
+            class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold"
+          >
+            Contact
+            <span class="text-primary">Us </span>
+          </h1>
+          <p class="text-gray-300 mt-10 pr-6">
+            Email, call, or complete the form to learn how Connectivo can solve
+            your messaging problem.
+          </p>
+          <div class="mt-auto flex items-center gap-2 pt-8">
+            <img src="/public/logo.png" alt="GROW logo" class="h-8" />
+            <div class="text-4xl font-bold">Connectivo</div>
           </div>
         </div>
-      </div>
 
-      <!-- Right side form -->
-      <div class="w-full">
-        <form @submit.prevent="submitForm" class="space-y-6">
-          <div class="grid grid-cols-2 gap-6">
-            <Input
-              v-model="firstName"
-              type="text"
-              required
-              placeholder="First Name"
-              class="form-input placeholder:text-white"
-            />
-            <Input
-              v-model="lastName"
-              type="text"
-              required
-              placeholder="Last Name"
-              class="form-input"
-            />
-          </div>
-          <div class="grid grid-cols-2 gap-6">
-            <Input
-              v-model="email"
-              type="email"
-              required
-              placeholder="Email"
-              class="form-input"
-            />
-            <Input
-              v-model="phoneNumber"
-              type="tel"
-              required
-              placeholder="Phone Number"
-              class="form-input"
-            />
-          </div>
-          <Textarea
-            v-model="message"
-            required
-            placeholder="Type Your Message"
-            rows="6"
-            class="form-input"
-          ></Textarea>
-          <div class="flex items-center justify-between">
-            <div class="flex items-center">
-              <Checkbox class="border-primary" />
-              <Label for="terms" class="ml-2 text-sm"
-                >I agree to the website terms and conditions</Label
-              >
+        <!-- Right side with form -->
+        <div class="w-3/5">
+          <form @submit.prevent="submitForm">
+            <div class="grid grid-cols-2 gap-4 mb-4">
+              <input
+                v-model="firstName"
+                type="text"
+                placeholder="First Name"
+                class="input-field"
+              />
+              <input
+                v-model="lastName"
+                type="text"
+                placeholder="Last Name"
+                class="input-field"
+              />
             </div>
-            <Button type="submit"> Send </Button>
-          </div>
-        </form>
+            <div class="grid grid-cols-2 gap-4 mb-4">
+              <input
+                v-model="email"
+                type="email"
+                placeholder="Email"
+                class="input-field"
+              />
+              <input
+                v-model="phoneNumber"
+                type="tel"
+                placeholder="Phone Number"
+                class="input-field"
+              />
+            </div>
+            <textarea
+              v-model="message"
+              placeholder="Type  Your Message"
+              rows="4"
+              class="input-field mb-4"
+            ></textarea>
+            <div class="flex items-center justify-between">
+              <div class="flex items-center mb-6">
+                <Checkbox
+                  v-model="agreeTerms"
+                  type="checkbox"
+                  id="terms"
+                  class="mr-2"
+                />
+                <Label for="terms" class="text-sm text-gray-400"
+                  >I agree to the website terms and conditions</Label
+                >
+              </div>
+
+              <Button
+                type="submit"
+                class="py-3 px-20 bg-gradient-to-br from-green-300 to-green-900 rounded-full text-black font-semibold hover:from-green-500 hover:to-green-600 transition duration-300"
+              >
+                Send
+              </Button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
 </template>
 
 <script setup>
 import { ref } from "vue";
-import { Mail, Phone } from "lucide-vue-next"; // Import specific icons
 
 const firstName = ref("");
 const lastName = ref("");
 const email = ref("");
 const phoneNumber = ref("");
 const message = ref("");
+const agreeTerms = ref(false);
 
 const submitForm = () => {
-  // Handle form submission logic here
+  // Handle form submission
   console.log("Form submitted", {
     firstName,
     lastName,
     email,
     phoneNumber,
     message,
-    agreeToTerms,
+    agreeTerms,
   });
 };
 </script>
 
 <style scoped>
-.form-input {
-  background-color: #1f2937;
-  color: white;
-  border: 1px solid #374151;
-  padding: 0.75rem;
-  border-radius: 0.375rem;
+.input-field {
+  @apply w-full p-3 rounded-2xl bg-green-900 bg-opacity-30 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500;
 }
 </style>

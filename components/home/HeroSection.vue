@@ -1,6 +1,6 @@
 <template>
   <div
-    class="min-h-[800px] h-screen flex flex-col items-center justify-center text-white p-8 bg-gradient-to-br from-blue-950 via-black to-blue-400  -mt-[55px]"
+    class="min-h-[800px] h-screen flex flex-col items-center justify-center text-white p-8 bg-center bg-[url('/public/green-bg.svg')] -mt-[55px]"
   >
     <div class="text-start">
       <div class="flex gap-3 items-center font-extrabold text-4xl md:text-8xl">
@@ -27,7 +27,7 @@
       Free up your time by connecting the systems you depend on, by a provider
       you can count on.
     </p>
-    <TheCard class="p-6 rounded-3xl mb-12 max-w-3xl mt-4">
+    <TheCard class="p-6 rounded-3xl mb-12 max-w-3xl mt-10">
       <h3 class="text-3xl font-semibold mb-2 capitalize">
         Your technology partner for digital solutions.
       </h3>
