@@ -1,16 +1,18 @@
 <template>
-  <section
-    id="contact"
-    class="bg-gradient-to-b from-[#0D1117] via-[black] to-[#1E2368]"
-  >
+  <section id="contact" class="relative overflow-hidden">
+    <!-- Skewed Background Gradient -->
     <div
-      class="flex flex-col md:flex-row items-center container gap-10 py-8 md:pt-[150px]"
+      class="absolute inset-0 -z-10 transform skew-y-6 origin-top-left"
+      style="background: linear-gradient(to bottom, #0d1117, black, #1e2368)"
+    ></div>
+
+    <div
+      class="flex flex-col md:flex-row items-center container gap-10 py-8 md:pt-[250px]"
     >
       <!-- Left side content -->
       <div class="md:max-w-xl w-full flex flex-col justify-between">
         <h1 class="text-4xl sm:text-5xl md:text-7xl font-bold mb-2">
-          Resquest A
-          <span class="text-primary">Free Trial</span>
+          Request A <span class="text-primary">Free Trial</span>
         </h1>
         <p class="text-gray-400">
           Email, call, or complete the form to learn how Connectivo can solve
@@ -34,7 +36,6 @@
               concerns or queries you may have.
             </p>
           </div>
-
           <div class="mb-4">
             <h3 class="font-bold mb-1">Feedback and Suggestions</h3>
             <p class="text-gray-400 text-xs">
@@ -43,19 +44,19 @@
               Connectivo.
             </p>
           </div>
-
           <div>
             <h3 class="font-bold mb-1">Media Inquiries</h3>
             <p class="text-gray-400 text-xs">
               For media-related questions or press inquiries, please contact us
               at
               <a href="mailto:info@connectivo.se" class="text-primary">
-                info@connectivo.se</a
-              >
+                info@connectivo.se
+              </a>
             </p>
           </div>
         </div>
       </div>
+
       <!-- Right side form -->
       <div class="w-full">
         <form @submit.prevent="submitForm" class="space-y-6">
@@ -65,7 +66,7 @@
               type="text"
               required
               placeholder="First Name"
-              class="form-input placeholder:text-white 400placeholder-red-"
+              class="form-input placeholder:text-white"
             />
             <Input
               v-model="lastName"
@@ -115,13 +116,13 @@
 
 <script setup>
 import { ref } from "vue";
+import { Mail, Phone } from "lucide-vue-next"; // Import specific icons
 
 const firstName = ref("");
 const lastName = ref("");
 const email = ref("");
 const phoneNumber = ref("");
 const message = ref("");
-const agreeToTerms = ref(false);
 
 const submitForm = () => {
   // Handle form submission logic here
@@ -135,3 +136,13 @@ const submitForm = () => {
   });
 };
 </script>
+
+<style scoped>
+.form-input {
+  background-color: #1f2937;
+  color: white;
+  border: 1px solid #374151;
+  padding: 0.75rem;
+  border-radius: 0.375rem;
+}
+</style>

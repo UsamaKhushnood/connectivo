@@ -3,8 +3,8 @@
     <HeroSection />
     <!-- <ServicesSec2 /> -->
     <ServicesSec />
-    <OurProcess />
     <PlatformIntegration />
+    <OurProcess />
   </div>
 </template>
 <script setup>

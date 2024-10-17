@@ -1,115 +1,94 @@
 <template>
-  <section id="process" class="text-white p-8 md:py-[150px]">
-    <div class="max-w-7xl mx-auto ">
-      <h1
-        class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-10 sm:mb-16 md:mb-20 text-center"
-      >
-        Our
-        <span class="text-primary">Process</span>
-      </h1>
-      <div class="relative ">
+  <div id="process" class="container py-[150px]">
+    <h1
+      class="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-10 sm:mb-16 md:mb-20"
+    >
+      Our
+      <span class="text-primary">Process </span>
+    </h1>
+    <div class="relative">
+      <!-- Icons aligned horizontally -->
+      <div class="flex justify-between items-center relative">
         <div
-          class="absolute left-0 sm:left-1/2 top-0 bottom-0 transform sm:-translate-x-1/2 w-0.5 bg-primary"
-        ></div>
-        <div class="space-y-8 sm:space-y-16">
+          v-for="(platform, index) in platforms"
+          :key="platform.name"
+          class="flex flex-col items-center"
+          :class="index === 1 ? 'md:mb-[165px] mb-[180px]' : 'md:mt-[163px] mt-[180px]'"
+        >
+          <!-- Blue Line Above (For Even Indexes) -->
           <div
-            v-for="(step, index) in processSteps"
-            :key="index"
-            class="relative flex flex-col sm:flex-row items-start sm:items-center mb-8 sm:mb-0"
+            v-if="index % 2 === 0"
+            class="h-8 w-0.5 bg-primary"
+            aria-hidden="true"
+          ></div>
+
+          <!-- Platform Icon -->
+
+          <div
+            class="bg-gradient-to-b from-[#2a462b8a] via-[#101010] border border-green-900 rounded-full p-2 w-20 h-20 flex items-center justify-center mb-4"
+            @mouseenter="hoveredPlatform = platform"
+            @mouseleave="hoveredPlatform = null"
           >
-            <div
-              class="absolute left-0 sm:left-1/2 transform -translate-x-1/2 mt-6 sm:mt-0"
-            >
-              <div
-                class="w-12 h-12 bg-gradient-to-b from-[#15231C] via-[#101010] to-[#1F2418] border border-primary rounded-full flex items-center justify-center"
-              >
-                <component :is="step.icon" class="w-6 h-6 text-primary" />
-              </div>
-            </div>
-            <div
-              :class="[
-                'w-full sm:w-1/2 md:pl-16 pl-10 sm:pl-0 sm:pr-8 md:pr-16',
-                index % 2 === 0
-                  ? 'sm:ml-auto sm:text-left'
-                  : 'sm:text-right md:text-start',
-              ]"
-            >
-              <h3 class="text-3xl font-bold mb-2">{{ step.title }}</h3>
-              <p class="text-gray-400">{{ step.description }}</p>
-            </div>
+            <component :is="platform.icon" class="text-primary" size="30" />
           </div>
+          <span class="md:text-2xl font-medium">
+            {{ platform.name }}
+          </span>
+
+          <!-- Red Line Below (For Odd Indexes) -->
+          <div
+            v-if="index % 2 !== 0"
+            class="mt-2 h-8 w-0.5 bg-primary"
+            aria-hidden="true"
+          ></div>
         </div>
       </div>
-    </div>
-  </section>
-</template>
 
+      <!-- Horizontal Line -->
+      <div
+        class="absolute left-0 right-0 top-1/2 border-t-2 border-primary"
+        aria-hidden="true"
+      ></div>
+    </div>
+
+    <!-- Tooltip Section -->
+    <Transition name="fade">
+      <div
+        v-if="hoveredPlatform"
+        class="fixed bottom-8 right-8 bg-gradient-to-b from-[#101010] via-[#101010] to-[#000000] rounded-2xl border z-10 p-6 md:max-w-2xl"
+      >
+        <h2 class="text-2xl font-bold mb-2">
+          {{ hoveredPlatform.name }}
+        </h2>
+        <p class="text-gray-400">{{ hoveredPlatform.description }}</p>
+      </div>
+    </Transition>
+  </div>
+</template>
 <script setup>
 import { ref } from "vue";
-import { ChartNoAxesColumn, CodeIcon, Truck } from "lucide-vue-next";
+import { ChartNoAxesColumn, CodeIcon, Truck } from "lucide-vue-next"; // Import specific icons
 
-const processSteps = ref([
+const platforms = [
   {
-    title: "Situation and strategy analysis",
-    description:
-      "There's a lot that we do before actually starting the project. Market research and analysis, studying and understanding the technical documentation to assess the limitations and possibilities between apps, listening to the clients' needs and preferences, consulting with stakeholders and finally coming up with a high-level mapping. With emphasis on planning and problem solving, the client can expect to receive a clear execution plan.",
+    name: "Situation and Strategy Analysis",
     icon: ChartNoAxesColumn,
+    description:
+      "There's a lot that we do before actually starting the project. Market research and analysis, studying and understanding the technichal documentation to asses the limitations and possibilities between apps, listening in on the clients’ needs and preferences, consulting with stakeholders and finally coming up with a high-level mapping. With emphasiz on planning and problem solving the client can expect to receive a clear execution plan..",
   },
   {
-    title: "Development Plan & Production",
-    description:
-      "With an accepted offer and agreed upon strategy, the craftsmanship starts to convert ideas, needs and demands from concept to code. Each project is led by at least one project manager and depending on the client's budget, one or several seasoned developers. Our experience in custom application development has contributed to the formation and growth of companies in a variety of industries. Every developer in our team understands that clients depend on the quality of their work, thus, put all efforts to give the best result possible.",
+    name: "Development Plan & Production",
     icon: CodeIcon,
+    description:
+      "With an accepted offer and agreed upon strategy, the craftmanship starts to convert ideas, needs and demands from concept to code. Each project is lead by minimum one project manager and depening on the clients budget, one or several seasoned developers. Our experience in custom application development had contributed to the formation and growth of companies in a variety of industries. Every developer in our team understands that clients depend on the quality of their work, thus, put all efforts to give the best result possible.",
   },
   {
-    title: "Delivery & Follow-up",
-    description:
-      "After close contact and careful development, delivery of the product / service follows. A quality review is done to see that everything is up to standard. Should any errors or bumps still creep in, we have a guarantee that covers errors that are discovered within 30 days of delivery free of charge to ensure the client's needs are met.",
+    name: "Delivery & Follow-up",
     icon: Truck,
+    description:
+      "After close contact and careful development, delivery of the product / service follows. A quality review is done to see that everything is up to standard. Should any errors or bumps still creep in, we have a guarantee that covers errors that are discovered within 30 days of delivery free of charge to ensure the clients needs are met .",
   },
-]);
+];
+
+const hoveredPlatform = ref(null);
 </script>
-
-<style scoped>
-@keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes fadeInRight {
-  from {
-    opacity: 0;
-    transform: translateX(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@media (min-width: 640px) {
-  .relative:nth-child(odd) {
-    animation: fadeInLeft 0.6s ease-out forwards;
-  }
-
-  .relative:nth-child(even) {
-    animation: fadeInRight 0.6s ease-out forwards;
-  }
-}
-
-.relative:nth-child(1) {
-  animation-delay: 0.1s;
-}
-.relative:nth-child(2) {
-  animation-delay: 0.3s;
-}
-.relative:nth-child(3) {
-  animation-delay: 0.5s;
-}
-</style>
