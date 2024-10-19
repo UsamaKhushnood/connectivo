@@ -1,94 +1,117 @@
 <template>
-  <div id="process" class="container py-[150px]">
-    <h1
-      class="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-10 sm:mb-16 md:mb-20"
-    >
-      Our
-      <span class="text-primary">Process </span>
-    </h1>
-    <div class="relative">
-      <!-- Icons aligned horizontally -->
-      <div class="flex justify-between items-center relative">
+  <section id="process" class="relative overflow-hidden">
+    <!-- Rotating Background Image -->
+    <!-- <div
+      class="absolute top-0 right-0 h-full w-1/2 bg-[url('/bg2.svg')] bg-no-repeat bg-right rotate-12 -z-20"
+    ></div> -->
+
+    <!-- Section Content -->
+    <div class="container relative z-10 py-[150px]">
+      <h1
+        class="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-10 sm:mb-16 md:mb-20"
+      >
+        Our <span class="text-primary">Process</span>
+      </h1>
+      <div>
+        <!-- Step 1 -->
         <div
-          v-for="(platform, index) in platforms"
-          :key="platform.name"
-          class="flex flex-col items-center"
-          :class="index === 1 ? 'md:mb-[165px] mb-[180px]' : 'md:mt-[163px] mt-[180px]'"
+          class="relative flex flex-col items-center pb-10"
+          @mouseenter="
+            hoveredPlatform = {
+              name: 'Situation and Strategy Analysis',
+              description:
+                'We conduct market research, analyze documentation, and map strategies based on client needs.',
+            }
+          "
+          @mouseleave="hoveredPlatform = null"
         >
-          <!-- Blue Line Above (For Even Indexes) -->
-          <div
-            v-if="index % 2 === 0"
-            class="h-8 w-0.5 bg-primary"
-            aria-hidden="true"
-          ></div>
-
-          <!-- Platform Icon -->
-
           <div
             class="bg-gradient-to-b from-[#2a462b8a] via-[#101010] border border-green-900 rounded-full p-2 w-20 h-20 flex items-center justify-center mb-4"
-            @mouseenter="hoveredPlatform = platform"
+          >
+            <ChartNoAxesColumn class="text-primary" size="30" />
+          </div>
+          <span class="md:text-2xl font-medium mb-10">
+            Situation and Strategy Analysis
+          </span>
+          <img
+            src="/arrow.svg"
+            class="absolute bottom-7 translate-y-1/2 -rotate-90 w-16 h-auto"
+          />
+        </div>
+
+        <div
+          class="bg-gradient-to-br from-[#69ff64] via-[#111] to-[#69ff64] h-0.5"
+        ></div>
+
+        <div class="flex justify-between pl-10 pr-20">
+          <!-- Step 2 -->
+          <div
+            class="relative flex flex-col items-center"
+            @mouseenter="
+              hoveredPlatform = {
+                name: 'Development Plan & Production',
+                description:
+                  'We convert ideas into code, working with developers and project managers for smooth execution.',
+              }
+            "
             @mouseleave="hoveredPlatform = null"
           >
-            <component :is="platform.icon" class="text-primary" size="30" />
+            <div
+              class="mt-20 bg-gradient-to-b from-[#2a462b8a] via-[#101010] border border-green-900 rounded-full p-2 w-20 h-20 flex items-center justify-center mb-4"
+            >
+              <CodeIcon class="text-primary" size="30" />
+            </div>
+            <span class="md:text-2xl font-medium">
+              Development Plan & Production
+            </span>
+            <img
+              src="/arrow.svg"
+              class="absolute transform -translate-y-1/2 top-8 rotate-90 w-16"
+            />
           </div>
-          <span class="md:text-2xl font-medium">
-            {{ platform.name }}
-          </span>
 
-          <!-- Red Line Below (For Odd Indexes) -->
+          <!-- Step 3 -->
           <div
-            v-if="index % 2 !== 0"
-            class="mt-2 h-8 w-0.5 bg-primary"
-            aria-hidden="true"
-          ></div>
+            class="relative flex flex-col items-center"
+            @mouseenter="
+              hoveredPlatform = {
+                name: 'Delivery & Follow-up',
+                description:
+                  'After delivery, we perform quality reviews and offer a 30-day guarantee for adjustments.',
+              }
+            "
+            @mouseleave="hoveredPlatform = null"
+          >
+            <div
+              class="mt-20 bg-gradient-to-b from-[#2a462b8a] via-[#101010] border border-green-900 rounded-full p-2 w-20 h-20 flex items-center justify-center mb-4"
+            >
+              <Truck class="text-primary" size="30" />
+            </div>
+            <span class="md:text-2xl font-medium"> Delivery & Follow-up </span>
+            <img
+              src="/arrow.svg"
+              class="absolute transform -translate-y-1/2 top-8 rotate-90 w-16"
+            />
+          </div>
         </div>
-      </div>
 
-      <!-- Horizontal Line -->
-      <div
-        class="absolute left-0 right-0 top-1/2 border-t-2 border-primary"
-        aria-hidden="true"
-      ></div>
+        <Transition name="fade">
+          <div
+            v-if="hoveredPlatform"
+            class="fixed bottom-12 right-8 bg-gradient-to-b from-[#101010] via-[#101010] to-[#000000] rounded-2xl border z-10 p-6 md:max-w-2xl"
+          >
+            <h2 class="text-2xl font-bold mb-2">{{ hoveredPlatform.name }}</h2>
+            <p class="text-gray-400">{{ hoveredPlatform.description }}</p>
+          </div>
+        </Transition>
+      </div>
     </div>
-
-    <!-- Tooltip Section -->
-    <Transition name="fade">
-      <div
-        v-if="hoveredPlatform"
-        class="fixed bottom-8 right-8 bg-gradient-to-b from-[#101010] via-[#101010] to-[#000000] rounded-2xl border z-10 p-6 md:max-w-2xl"
-      >
-        <h2 class="text-2xl font-bold mb-2">
-          {{ hoveredPlatform.name }}
-        </h2>
-        <p class="text-gray-400">{{ hoveredPlatform.description }}</p>
-      </div>
-    </Transition>
-  </div>
+  </section>
 </template>
+
 <script setup>
 import { ref } from "vue";
-import { ChartNoAxesColumn, CodeIcon, Truck } from "lucide-vue-next"; // Import specific icons
-
-const platforms = [
-  {
-    name: "Situation and Strategy Analysis",
-    icon: ChartNoAxesColumn,
-    description:
-      "There's a lot that we do before actually starting the project. Market research and analysis, studying and understanding the technichal documentation to asses the limitations and possibilities between apps, listening in on the clients’ needs and preferences, consulting with stakeholders and finally coming up with a high-level mapping. With emphasiz on planning and problem solving the client can expect to receive a clear execution plan..",
-  },
-  {
-    name: "Development Plan & Production",
-    icon: CodeIcon,
-    description:
-      "With an accepted offer and agreed upon strategy, the craftmanship starts to convert ideas, needs and demands from concept to code. Each project is lead by minimum one project manager and depening on the clients budget, one or several seasoned developers. Our experience in custom application development had contributed to the formation and growth of companies in a variety of industries. Every developer in our team understands that clients depend on the quality of their work, thus, put all efforts to give the best result possible.",
-  },
-  {
-    name: "Delivery & Follow-up",
-    icon: Truck,
-    description:
-      "After close contact and careful development, delivery of the product / service follows. A quality review is done to see that everything is up to standard. Should any errors or bumps still creep in, we have a guarantee that covers errors that are discovered within 30 days of delivery free of charge to ensure the clients needs are met .",
-  },
-];
+import { ChartNoAxesColumn, CodeIcon, Truck } from "lucide-vue-next";
 
 const hoveredPlatform = ref(null);
 </script>
