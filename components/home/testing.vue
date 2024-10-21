@@ -1,7 +1,7 @@
 <template>
-  <div id="platform-integration" class="container mx-auto py-[160px]">
+  <div id="platform-integration" class="container mx-auto md:py-[160px] py-10">
     <div
-      class="mx-auto bg-gradient-to-b from-[#2a462b8a] via-[#101010] border border-green-900 rounded-full p-2 text-xl font-bold w-fit px-6 flex items-center justify-center mb-4"
+      class="md:mx-auto bg-gradient-to-b from-[#2a462b8a] via-[#101010] border border-green-900 rounded-full p-2 md:text-xl font-bold w-fit px-6 flex items-center justify-center mb-4"
     >
       Discover
     </div>
@@ -10,7 +10,7 @@
     >
       <span class="text-primary">Platform</span> Integrations
     </h1>
-    <p class="mt-10 mb-20 max-w-5xl text-center mx-auto">
+    <p class="mt-10 md:mb-20 max-w-5xl md:text-center mx-auto">
       Integration Platform as a Service (iPaaS) is a suite of cloud services,
       enabling companies to set up the synchronization of data between
       applications and configure specific workflow rules. We offer custom
@@ -18,37 +18,37 @@
       Popular requested features from our clients include capabilities for
       managing, harvesting, and visualizing data.
     </p>
-    <div class="flex gallery">
-      <div class="left w-1/2">
-        <div class="desktopContent mx-auto w-4/5">
+    <div class="flex gallery ">
+      <div class="left md:w-1/2 w-auto">
+        <div class="desktopContent mx-auto md:w-4/5">
           <div
-            class="desktopContentSection min-h-screen flex flex-col justify-center"
+            class="desktopContentSection md:min-h-screen my-6 md:my-0 flex flex-col justify-center"
           >
             <h6 class="text-base font-semibold text-gray-400 mb-4">
               The AI-ready iPaaS
             </h6>
-            <h1 class="text-4xl lg:text-6xl mb-6 font-semibold">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl mb-6 font-semibold">
               10x faster results
             </h1>
-            <p class="text-xl leading-relaxed">
+            <p class="md:text-xl leading-relaxed">
               Accelerate integration and automation delivery with a powerful
               low-code, AI-augmented builder for business technologists and
               development teams.
             </p>
           </div>
           <div
-            class="desktopContentSection min-h-screen flex flex-col justify-center"
+            class="desktopContentSection md:min-h-screen my-6 md:my-0 flex flex-col justify-center"
           >
             <div
-              class="desktopContentSection min-h-screen flex flex-col justify-center"
+              class="desktopContentSection md:min-h-screen my-6 md:my-0 flex flex-col justify-center"
             >
               <h6 class="text-base font-semibold text-gray-400 mb-4">
                 The AI-ready iPaaS
               </h6>
-              <h1 class="text-4xl lg:text-6xl mb-6 font-semibold">
+              <h1 class="text-4xl sm:text-5xl md:text-6xl mb-6 font-semibold">
                 10x faster results
               </h1>
-              <p class="text-xl leading-relaxed">
+              <p class="md:text-xl leading-relaxed">
                 Accelerate integration and automation delivery with a powerful
                 low-code, AI-augmented builder for business technologists and
                 development teams.
@@ -56,23 +56,23 @@
             </div>
           </div>
           <div
-            class="desktopContentSection min-h-screen flex flex-col justify-center"
+            class="desktopContentSection md:min-h-screen my-6 md:my-0 flex flex-col justify-center"
           >
             <div
-              class="desktopContentSection min-h-screen flex flex-col justify-center"
+              class="desktopContentSection md:min-h-screen my-6 md:my-0 flex flex-col justify-center"
             >
               <h6 class="text-base font-semibold text-gray-400 mb-4">
                 The AI-ready iPaaS
               </h6>
-              <h1 class="text-4xl lg:text-6xl mb-6 font-semibold">
+              <h1 class="text-4xl sm:text-5xl md:text-6xl mb-6 font-semibold">
                 10x faster results
               </h1>
-              <p class="text-xl leading-relaxed">
+              <p class="md:text-xl leading-relaxed">
                 Accelerate integration and automation delivery with a powerful
                 low-code, AI-augmented builder for business technologists and
                 development teams.
               </p>
-              <p class="text-xl leading-relaxed">
+              <p class="md:text-xl leading-relaxed">
                 Accelerate integration and automation delivery with a powerful
                 low-code, AI-augmented builder for business technologists and
                 development teams.
@@ -80,29 +80,29 @@
             </div>
           </div>
           <div
-            class="desktopContentSection min-h-screen flex flex-col justify-center"
+            class="desktopContentSection md:min-h-screen my-6 md:my-0 flex flex-col justify-center"
           >
             <div
-              class="desktopContentSection min-h-screen flex flex-col justify-center"
+              class="desktopContentSection md:min-h-screen my-6 md:my-0 flex flex-col justify-center"
             >
               <h6 class="text-base font-semibold text-gray-400 mb-4">
                 The AI-ready iPaaS
               </h6>
-              <h1 class="text-4xl lg:text-6xl mb-6 font-semibold">
+              <h1 class="text-4xl sm:text-5xl md:text-6xl mb-6 font-semibold">
                 10x faster results
               </h1>
-              <p class="text-xl leading-relaxed">
+              <p class="md:text-xl leading-relaxed">
                 Accelerate integration and automation delivery with a powerful
                 low-code, AI-augmented builder for business technologists and
                 development teams.
               </p>
-              <p class="text-xl leading-relaxed mt-3">
+              <p class="md:text-xl leading-relaxed mt-3">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Commodi, sit facere magni, totam laborum error obcaecati, odio
                 tempore placeat nulla asperiores nisi. Repellendus reprehenderit
                 ipsa officiis consequatur, aperiam laborum a?
               </p>
-              <p class="text-xl leading-relaxed mt-3">
+              <p class="md:text-xl leading-relaxed mt-3">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Commodi, sit facere magni, totam laborum error obcaecati, odio
                 tempore placeat nulla asperiores nisi. Repellendus reprehenderit
@@ -113,7 +113,7 @@
         </div>
       </div>
 
-      <div class="right w-1/2 h-screen flex flex-col justify-center">
+      <div class="right w-1/2 h-screen  flex-col justify-center hidden md:flex">
         <div
           class="desktopPhotos relative w-[40vw] h-[40vw] rounded-2xl overflow-hidden shadow-lg"
         >

@@ -11,37 +11,37 @@
       </div>
     </div>
 
-    <div class="container relative z-10 py-[300px]">
+    <div class=" container relative z-10 md:py-[300px] pt-[100px] pb-[250px]">
       <h1
-        class="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-10 sm:mb-16 md:mb-20 text-center"
+        class="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-10 sm:mb-16 md:mb-20 md:text-center"
       >
         Our <span class="text-primary">Process</span>
       </h1>
       <div>
         <!-- Step 1 -->
-        <div class="relative flex flex-col items-center pb-10">
+        <div class="relative flex md:flex-col gap-6 items-center md:pb-10 pb-6">
           <div
-            class="bg-gradient-to-b from-[#2a462b8a] via-[#101010] border border-green-900 rounded-full p-2 w-20 h-20 flex items-center justify-center mb-4"
+            class="bg-gradient-to-b from-[#2a462b8a] via-[#101010] border border-green-900 rounded-full p-2 md:w-20 md:h-20 flex items-center justify-center md:mb-4"
           >
             <ChartNoAxesColumn class="text-primary" size="30" />
           </div>
-          <span class="md:text-2xl font-medium mb-10">
+          <span class="md:text-2xl font-medium md:mb-10">
             Situation and Strategy Analysis
           </span>
           <img
             src="/arrow.svg"
-            class="absolute bottom-7 translate-y-1/2 -rotate-90 w-16 h-auto"
+            class="absolute bottom-7 translate-y-1/2 -rotate-90 w-16 h-auto hidden md:block"
           />
         </div>
 
         <div
-          class="bg-gradient-to-br from-[#69ff64] via-[#111] to-[#69ff64] h-0.5"
+          class="bg-gradient-to-br from-[#69ff64] via-[#111] to-[#69ff64] h-0.5 hidden md:block"
         ></div>
 
-        <div class="flex justify-between pl-10 pr-20">
+        <div class="md:flex justify-between md:pl-10 md:pr-20">
           <!-- Step 2 -->
           <div
-            class="relative flex flex-col items-center"
+            class="relative flex md:flex-col gap-6 items-center pb-6"
             @mouseenter="
               hoveredPlatform = {
                 name: 'Development Plan & Production',
@@ -52,7 +52,7 @@
             @mouseleave="hoveredPlatform = null"
           >
             <div
-              class="mt-20 bg-gradient-to-b from-[#2a462b8a] via-[#101010] border border-green-900 rounded-full p-2 w-20 h-20 flex items-center justify-center mb-4"
+              class="md:mt-20 bg-gradient-to-b from-[#2a462b8a] via-[#101010] border border-green-900 rounded-full p-2 md:w-20 md:h-20 flex items-center justify-center md:mb-4"
             >
               <CodeIcon class="text-primary" size="30" />
             </div>
@@ -61,13 +61,13 @@
             </span>
             <img
               src="/arrow.svg"
-              class="absolute transform -translate-y-1/2 top-8 rotate-90 w-16"
+              class="absolute transform -translate-y-1/2 top-8 rotate-90 w-16 hidden md:block"
             />
           </div>
 
           <!-- Step 3 -->
           <div
-            class="relative flex flex-col items-center"
+            class="relative flex md:flex-col gap-6 items-center"
             @mouseenter="
               hoveredPlatform = {
                 name: 'Delivery & Follow-up',
@@ -78,14 +78,14 @@
             @mouseleave="hoveredPlatform = null"
           >
             <div
-              class="mt-20 bg-gradient-to-b from-[#2a462b8a] via-[#101010] border border-green-900 rounded-full p-2 w-20 h-20 flex items-center justify-center mb-4"
+              class="md:mt-20 bg-gradient-to-b from-[#2a462b8a] via-[#101010] border border-green-900 rounded-full p-2 md:w-20 md:h-20 flex items-center justify-center mb-4"
             >
               <Truck class="text-primary" size="30" />
             </div>
             <span class="md:text-2xl font-medium"> Delivery & Follow-up </span>
             <img
               src="/arrow.svg"
-              class="absolute transform -translate-y-1/2 top-8 rotate-90 w-16"
+              class="absolute transform -translate-y-1/2 top-8 rotate-90 w-16 hidden md:block"
             />
           </div>
         </div>

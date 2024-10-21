@@ -1,41 +1,42 @@
 <template>
-  <div class="container mx-auto py-[160px]">
+  <div class="container mx-auto md:py-[160px] py-20">
     <div
-      class="mx-auto bg-gradient-to-b from-[#2a462b8a] via-[#101010] border border-green-900 rounded-full p-2 text-xl font-bold w-fit px-6 flex items-center justify-center mb-4"
+      class="md:mx-auto bg-gradient-to-b from-[#2a462b8a] via-[#101010] border border-green-900 rounded-full p-2 text-xl font-bold w-fit px-6 flex items-center justify-center mb-4"
     >
       Discover
     </div>
     <h1
-      class="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold text-center"
+      class="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold md:text-center"
     >
       <span class="text-primary">Our</span> Products
     </h1>
 
     <div class="flex gallery">
-      <div class="left w-1/2">
-        <div class="desktopContent mx-auto w-4/5">
+      <div class="left md:w-1/2">
+        <div class="desktopContent mx-auto md:w-4/5">
           <div
-            class="desktopContentSection min-h-screen flex flex-col justify-center"
+            class="desktopContentSection md:min-h-screen my-6 md:my-0 flex flex-col justify-center"
             v-for="(product, x) in products"
             :key="x"
           >
             <h6 class="text-base font-semibold text-gray-400 mb-4">
               The AI-ready iPaaS
             </h6>
-            <h1 class="text-4xl lg:text-6xl mb-6 font-semibold">
+            <img :src="product.logo" class="md:hidden">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl mb-6 font-semibold">
               {{ product.title }}
             </h1>
-            <p class="text-xl leading-relaxed">
+            <p class="md:text-xl leading-relaxed">
               {{ product.description }}
             </p>
             <a :href="product.url" target="_blank" class="mt-4">
-              <Button class="font-bold">View More</Button>
+              <Button class="font-bold w-full md:w-auto">View More</Button>
             </a>
           </div>
         </div>
       </div>
-
-      <div class="right w-1/2 h-screen flex flex-col justify-center">
+      
+      <div class="right w-1/2 h-screen md:flex flex-col justify-center hidden">
         <div
           class="desktopPhotos relative w-[40vw] h-[40vw] rounded-2xl overflow-hidden shadow-lg"
         >

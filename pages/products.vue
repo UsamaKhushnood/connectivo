@@ -1,25 +1,25 @@
 <template>
   <div
-    class="text-white p-8 bg-[url('/public/bg-green.png')] bg-contain bg-no-repeat bg-right-top bg-black -mt-[55px]"
+    class="text-white p-8 bg-[url('/public/bg-green.png')] md:bg-contain bg-center bg-no-repeat md:bg-right-top bg-black -mt-[55px]"
   >
-    <div class="container">
-      <div class="mx-auto w-fit text-center mb-[120px] pt-[200px]">
+    <div class="container p-0">
+      <div class="mx-auto w-fit text-center md:mb-[120px] md:pt-[200px] pt-[100px]">
         <div class="text-start">
-          <h1 class="text-6xl font-extrabold max-w-5xl text-center">
+          <h1 class="text-3xl md:text-6xl font-extrabold md:max-w-5xl text-center">
             Standard solutions for common problems.
           </h1>
         </div>
 
-        <p class="text-xl mb-8 text-center max-w-2xl mx-auto mt-6">
+        <p class="md:text-xl mb-8 text-center max-w-2xl mx-auto mt-6">
           SaaS services built to empower companies and accelerate their digital
           journey.
         </p>
       </div>
       <div>
         <div
-          class="text-black shadow-lg p-10 rounded-xl mb-12 mt-10 max-w-6xl text-start bg-gradient-to-r from-green-200 via-teal-400 to-cyan-600 mx-auto"
+          class="text-black shadow-lg p-10 rounded-xl md:mb-12 md:mt-10 max-w-6xl text-start bg-gradient-to-r from-green-200 via-teal-400 to-cyan-600 mx-auto"
         >
-          <h3 class="text-3xl font-extrabold mb-2 capitalize">
+          <h3 class="md:text-3xl font-extrabold mb-2 capitalize">
             Entrepeneurship is tough. We are here to make it easier.
           </h3>
           <div class="text-sm font-medium space-y-3 mt-4">
