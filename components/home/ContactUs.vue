@@ -1,22 +1,20 @@
 <template>
-  <div id="contact" class="container p-4 md:pb-[60px] md:pt-[150px]">
+  <div id="contact" class="container mb-20">
     <div
       class="bg-gradient-to-br from-green-900 to-black rounded-2xl overflow-hidden backdrop-blur-sm"
     >
-      <div class="flex p-10">
+      <div class="flex p-20">
         <!-- Left side with title and description -->
         <div class="w-2/5">
-          <h1
-            class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold"
-          >
+          <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold">
             Contact
             <span class="text-primary">Us </span>
           </h1>
-          <p class="text-gray-300 mt-10 pr-6">
+          <p class="text-gray-300 mt-4 pr-10">
             Email, call, or complete the form to learn how Connectivo can solve
             your messaging problem.
           </p>
-          <div class="mt-auto flex items-center gap-2 pt-8">
+          <div class="mt-auto flex items-center gap-2 pt-20">
             <img src="/public/logo.png" alt="GROW logo" class="h-8" />
             <div class="text-4xl font-bold">Connectivo</div>
           </div>

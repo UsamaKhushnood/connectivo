@@ -83,65 +83,67 @@
       </div>
     </div>
   </div>
-  <section id="process" class="container md:py-[150px]">
-    <div class="overflow-hidden mt-12">
+  <div class="container">
+    <h1 class="text-4xl font-bold text-center mb-12 text-gray-800">
+      Our Products
+    </h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       <div
-        v-for="(service, index) in services"
+        v-for="(product, index) in products"
         :key="index"
-        class="border-b py-10"
+        class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105"
       >
-        <div class="md:flex gap-10">
-          <h1
-            class="text-7xl hidden md:block md:text-9xl font-extrabold text-neutral-700"
+        <div :class="[product.color, 'h-2']"></div>
+        <div class="p-6">
+          <img
+            :src="product.logo"
+            :alt="product.title"
+            class="w-20 h-20 mb-4 mx-auto"
+          />
+          <h2 class="text-2xl font-semibold text-gray-800 mb-2">
+            {{ product.title }}
+          </h2>
+          <p class="text-gray-600 mb-4">{{ product.description }}</p>
+          <button
+            class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
           >
-            {{ index + 1 }}.
-          </h1>
-          <div>
-            <h3 class="text-4xl font-bold">{{ service.title }}</h3>
-            <p class="text text-gray-400 my-6">
-              {{ service.description }}
-            </p>
-            <a :href="service.url" target="_blank">
-              <Button
-                size="sm"
-                class="rounded-full gap-2 h-7 w-full md:w-auto hidden md:flex"
-                >See more<ChevronRight size="16"
-              /></Button>
-              <Button
-                type="submit"
-                class="w-full md:w-auto rounded-full gap-4 text-xl h-12 block md:hidden"
-              >
-                See more
-              </Button>
-            </a>
-          </div>
+            See more
+            <ChevronRight class="ml-2 -mr-1 h-4 w-4" aria-hidden="true" />
+          </button>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 </template>
 <script setup>
 import { ref } from "vue";
 import { ChevronRight, MessageCircleMore } from "lucide-vue-next";
 
-const services = ref([
+const products = ref([
   {
     title: "Automatisera Mera",
     description:
       "Automatisera Mera translates to Automate More and is a integrationsplatform specialized in automating the bookkeeping of business transactions. Started in 2019, the platform has grown into supporting 40 + integrations and 4+ Accounting ERPs.By providing affordable yet advanced app integrations accountants and business owners can easily plugin and start benefiting substantially in from the time and work savings of automated bookkeeping.",
     url: "https://automatiseramera.se/",
+    color: "bg-emerald-500",
+    logo: "/placeholder.svg?height=80&width=80",
   },
   {
     title: "B2B Portal",
     description:
       "B2B commerce is growing steadily year by year yet the market for apps and services to aid businesses in their B2B sales are still lacking in areas. After continous requests from our customers we decided to tackle the problem and build a platform which allows for the wholeseller to within minutes setup a wholesale shop, fully hosted and secured, and start inviting their resellers for placing purchase orders. As fan’s of automation, naturally we went ahead and integrated it with Fortnox, allowing for full invoicing automation.",
     url: "https://b2bportal.se/",
+    color: "bg-blue-500",
+    logo: "/placeholder.svg?height=80&width=80",
   },
   {
     title: "Likvio",
     description:
       "ALikvio is a platform for businesses who use Fortnox and want to collect their financial data, statistics and recurring revenue analytics in an easy-to-navigate and highly functional portal, allwing business ownners to more easily visualize their financial data.",
     url: "https://likvio.se/",
+    color: "bg-purple-500",
+
+    logo: "/placeholder.svg?height=80&width=80",
   },
   {
     title: "Imexta",

@@ -1,4 +1,5 @@
 const animate = require("tailwindcss-animate");
+const { fontFamily } = require("tailwindcss/defaultTheme");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -15,6 +16,9 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        serif: ["Inter", ...fontFamily.sans],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -238,6 +242,10 @@ module.exports = {
         border: {
           to: { "--border-angle": "360deg" },
         },
+        levitate: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -261,6 +269,7 @@ module.exports = {
         "text-slide-8":
           "text-slide-8 20s cubic-bezier(0.83, 0, 0.17, 1) infinite",
         border: "border 4s linear infinite",
+        levitate: "levitate 3s ease-in-out infinite",
       },
     },
   },
