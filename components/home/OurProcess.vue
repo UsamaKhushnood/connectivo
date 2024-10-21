@@ -1,12 +1,17 @@
 <template>
-  <section id="process" class="relative overflow-hidden">
-    <!-- Rotating Background Image -->
-    <!-- <div
-      class="absolute top-0 right-0 h-full w-1/2 bg-[url('/bg2.svg')] bg-no-repeat bg-right rotate-12 -z-20"
-    ></div> -->
+  <section id="process" class="relative overflow-hidden bg-[url('/block.png')]">
+    <div
+      class="absolute inset-0 -mx-[22px] flex-none overflow-hidden z-1 bg-[radial-gradient(50%_50%_at_50%_50%,rgba(14,15,17,0)_0%,rgb(12_10_9)_100%)]"
+    ></div>
+    <div class="absolute inset-0 -skew-y-6 origin-right">
+      <div class="bg-primary w-[500px] h-12 absolute left-0 -top-[50px]">
+        <div
+          class="bg-[#2176e4b4] w-[250px] h-12 absolute left-[180px] -top-[30px]"
+        ></div>
+      </div>
+    </div>
 
-    <!-- Section Content -->
-    <div class="container relative z-10 py-[150px]">
+    <div class="container relative z-10 py-[300px]">
       <h1
         class="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-10 sm:mb-16 md:mb-20 text-center"
       >
@@ -95,6 +100,11 @@
           </div>
         </Transition> -->
       </div>
+    </div>
+    <div class="bg-primary w-[500px] h-12 absolute -skew-y-6 right-0 bottom-20">
+      <div
+        class="bg-[#2176e4b4] w-[250px] h-12 absolute left-[180px] -top-6"
+      ></div>
     </div>
   </section>
 </template>

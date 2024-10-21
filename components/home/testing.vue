@@ -1,112 +1,167 @@
 <template>
-  <div class="gallery">
-    <div class="left">
-      <div class="desktopContent">
-        <div class="desktopContentSection">
-          <h1>Red</h1>
-          <p>
-            Red is a color often associated with strong emotions such as
-            passion, love, and anger. It's a bold and attention-grabbing color
-            that can evoke feelings of excitement, warmth, and energy.
-          </p>
-        </div>
-        <div class="desktopContentSection">
-          <h1>Green</h1>
-          <p>
-            Green is a color that is often associated with nature, growth, and
-            harmony. It is a calming and relaxing color that can evoke feelings
-            of balance, stability, and freshness. In color psychology, green is
-            said to represent balance and stability, making it a popular choice
-            for branding and marketing in the health and wellness industry.
-          </p>
-        </div>
-        <div class="desktopContentSection">
-          <h1>Pink</h1>
-          <p>
-            Pink is a color that is often associated with femininity, romance,
-            and sweetness. It is a softer and more delicate shade of red that
-            can evoke feelings of warmth, love, and nurturing.
-          </p>
-          <p>
-            In the world of branding and marketing, pink is often used to target
-            a female audience or to promote products that are associated with
-            beauty, love, or romance.
-          </p>
-          <p>
-            Pink is also used in the food industry, as it is associated with
-            sweetness and desserts. Pink is often used in breast cancer
-            awareness campaigns, as it has become the signature color of the
-            movement.
-          </p>
-          <p>
-            Pink is also commonly used in baby showers and weddings, as it
-            symbolizes love, innocence, and new beginnings.
-          </p>
-        </div>
-        <div class="desktopContentSection">
-          <h1>Blue</h1>
-          <p>
-            Blue is a color that is often associated with calmness, trust, and
-            reliability. It is a peaceful and serene color that can evoke
-            feelings of stability, security, and professionalism. In color
-            psychology, blue is said to represent loyalty and trust, making it a
-            popular choice for branding and marketing in the finance and
-            technology industries.
-          </p>
-        </div>
-      </div>
+  <div id="platform-integration" class="container mx-auto py-[160px]">
+    <div
+      class="mx-auto bg-gradient-to-b from-[#2a462b8a] via-[#101010] border border-green-900 rounded-full p-2 text-xl font-bold w-fit px-6 flex items-center justify-center mb-4"
+    >
+      Discover
     </div>
-
-    <div class="right">
-      <!-- mobile content -->
-      <div class="mobileContent">
-        <div class="mobilePhoto red"></div>
-        <h1>Red</h1>
-        <p>
-          Red is a color often associated with strong emotions such as passion,
-          love, and anger. It's a bold and attention-grabbing color that can
-          evoke feelings of excitement, warmth, and energy.
-        </p>
-
-        <div class="mobilePhoto green"></div>
-        <h1>Green</h1>
-        <p>
-          Green is a color that is often associated with nature, growth, and
-          harmony. It is a calming and relaxing color that can evoke feelings of
-          balance, stability, and freshness. In color psychology, green is said
-          to represent balance and stability, making it a popular choice for
-          branding and marketing in the health and wellness industry.
-        </p>
-
-        <div class="mobilePhoto pink"></div>
-        <h1>Pink</h1>
-        <p>
-          Pink is a color that is often associated with femininity, romance, and
-          sweetness. It is a softer and more delicate shade of red that can
-          evoke feelings of warmth, love, and nurturing. In the world of
-          branding and marketing, pink is often used to target a female audience
-          or to promote products that are associated with beauty, love, or
-          romance.
-        </p>
-
-        <div class="mobilePhoto blue"></div>
-        <h1>Blue</h1>
-        <p>
-          Blue is a color that is often associated with calmness, trust, and
-          reliability. It is a peaceful and serene color that can evoke feelings
-          of stability, security, and professionalism. In color psychology, blue
-          is said to represent loyalty and trust, making it a popular choice for
-          branding and marketing in the finance and technology industries.
-        </p>
+    <h1
+      class="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold text-center"
+    >
+      <span class="text-primary">Platform</span> Integrations
+    </h1>
+    <p class="mt-10 mb-20 max-w-5xl text-center mx-auto">
+      Integration Platform as a Service (iPaaS) is a suite of cloud services,
+      enabling companies to set up the synchronization of data between
+      applications and configure specific workflow rules. We offer custom
+      development kits for linking legacy or new applications with each other.
+      Popular requested features from our clients include capabilities for
+      managing, harvesting, and visualizing data.
+    </p>
+    <div class="flex gallery">
+      <div class="left w-1/2">
+        <div class="desktopContent mx-auto w-4/5">
+          <div
+            class="desktopContentSection min-h-screen flex flex-col justify-center"
+          >
+            <h6 class="text-base font-semibold text-gray-400 mb-4">
+              The AI-ready iPaaS
+            </h6>
+            <h1 class="text-4xl lg:text-6xl mb-6 font-semibold">
+              10x faster results
+            </h1>
+            <p class="text-xl leading-relaxed">
+              Accelerate integration and automation delivery with a powerful
+              low-code, AI-augmented builder for business technologists and
+              development teams.
+            </p>
+          </div>
+          <div
+            class="desktopContentSection min-h-screen flex flex-col justify-center"
+          >
+            <div
+              class="desktopContentSection min-h-screen flex flex-col justify-center"
+            >
+              <h6 class="text-base font-semibold text-gray-400 mb-4">
+                The AI-ready iPaaS
+              </h6>
+              <h1 class="text-4xl lg:text-6xl mb-6 font-semibold">
+                10x faster results
+              </h1>
+              <p class="text-xl leading-relaxed">
+                Accelerate integration and automation delivery with a powerful
+                low-code, AI-augmented builder for business technologists and
+                development teams.
+              </p>
+            </div>
+          </div>
+          <div
+            class="desktopContentSection min-h-screen flex flex-col justify-center"
+          >
+            <div
+              class="desktopContentSection min-h-screen flex flex-col justify-center"
+            >
+              <h6 class="text-base font-semibold text-gray-400 mb-4">
+                The AI-ready iPaaS
+              </h6>
+              <h1 class="text-4xl lg:text-6xl mb-6 font-semibold">
+                10x faster results
+              </h1>
+              <p class="text-xl leading-relaxed">
+                Accelerate integration and automation delivery with a powerful
+                low-code, AI-augmented builder for business technologists and
+                development teams.
+              </p>
+              <p class="text-xl leading-relaxed">
+                Accelerate integration and automation delivery with a powerful
+                low-code, AI-augmented builder for business technologists and
+                development teams.
+              </p>
+            </div>
+          </div>
+          <div
+            class="desktopContentSection min-h-screen flex flex-col justify-center"
+          >
+            <div
+              class="desktopContentSection min-h-screen flex flex-col justify-center"
+            >
+              <h6 class="text-base font-semibold text-gray-400 mb-4">
+                The AI-ready iPaaS
+              </h6>
+              <h1 class="text-4xl lg:text-6xl mb-6 font-semibold">
+                10x faster results
+              </h1>
+              <p class="text-xl leading-relaxed">
+                Accelerate integration and automation delivery with a powerful
+                low-code, AI-augmented builder for business technologists and
+                development teams.
+              </p>
+              <p class="text-xl leading-relaxed mt-3">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Commodi, sit facere magni, totam laborum error obcaecati, odio
+                tempore placeat nulla asperiores nisi. Repellendus reprehenderit
+                ipsa officiis consequatur, aperiam laborum a?
+              </p>
+              <p class="text-xl leading-relaxed mt-3">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Commodi, sit facere magni, totam laborum error obcaecati, odio
+                tempore placeat nulla asperiores nisi. Repellendus reprehenderit
+                ipsa officiis consequatur, aperiam laborum a?
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <!-- desktop content -->
-
-      <div class="desktopPhotos">
-        <div class="desktopPhoto red"></div>
-        <div class="desktopPhoto green"></div>
-        <div class="desktopPhoto pink"></div>
-        <div class="desktopPhoto blue"></div>
+      <div class="right w-1/2 h-screen flex flex-col justify-center">
+        <div
+          class="desktopPhotos relative w-[40vw] h-[40vw] rounded-2xl overflow-hidden shadow-lg"
+        >
+          <div
+            class="desktopPhoto bg-gradient-to-r from-pink-500 via-red-500 to-orange-500 bg-crimson absolute inset-0 flex items-center justify-center"
+          >
+            <DotLottieVue
+              v-if="showLottie"
+              style="height: 500px; width: 500px"
+              autoplay
+              loop
+              src="https://assets.ctfassets.net/7rbn0raz0t75/6S4XdJkUf7h3JB2DHkVyub/8809626e8a9a8cf656fc95d28ba26b62/Composable_AI_Integration_Platform.json"
+            />
+          </div>
+          <div
+            class="desktopPhoto flex items-center justify-center bg-[linear-gradient(60deg,_rgb(247,_149,_51),_rgb(243,_112,_85),_rgb(239,_78,_123),_rgb(161,_102,_171),_rgb(80,_115,_184),_rgb(16,_152,_173),_rgb(7,_179,_155),_rgb(111,_186,_130))] bg-mediumseagreen absolute inset-0"
+          >
+            <DotLottieVue
+              v-if="lottieTriggers[0]"
+              style="height: 500px; width: 500px"
+              autoplay
+              loop
+              src="https://assets.ctfassets.net/7rbn0raz0t75/6Ryl6nYRduf9osSml8o55G/fee72abfb0a6f12d433c7afb4f71b423/10x_Faster_Results.json"
+            />
+          </div>
+          <div
+            class="desktopPhoto flex items-center justify-center bg-gradient-to-br from-gray-800 via-blue-700 to-gray-900 bg-deeppink absolute inset-0"
+          >
+            <DotLottieVue
+              v-if="lottieTriggers[1]"
+              style="height: 500px; width: 500px"
+              autoplay
+              loop
+              src="https://assets.ctfassets.net/7rbn0raz0t75/3GaesFQuhBNUetIRxkbqTA/d4056b27b9add6b4389e0e8dc941a442/Infuse_AI_Into_Business.json"
+            />
+          </div>
+          <div
+            class="desktopPhoto flex items-center justify-center bg-gradient-to-r from-cyan-100 via-blue-300 to-indigo-400 bg-dodgerblue absolute inset-0"
+          >
+            <DotLottieVue
+              v-if="lottieTriggers[2]"
+              style="height: 500px; width: 500px"
+              autoplay
+              loop
+              src="https://assets.ctfassets.net/7rbn0raz0t75/90lqGdCclqKpsTshc6Qne/e69004681d855df31eae0f7ace5219e7/Trusted_AI_Integration.json"
+            />
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -115,146 +170,70 @@
 <script>
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { DotLottieVue } from "@lottiefiles/dotlottie-vue";
 
 export default {
+  components: { DotLottieVue },
+  data() {
+    return {
+      lottieTriggers: [],
+      showLottie: false,
+    };
+  },
   mounted() {
     gsap.registerPlugin(ScrollTrigger);
-
-    const details = gsap.utils.toArray(
-      ".desktopContentSection:not(:first-child)"
-    );
-    const photos = gsap.utils.toArray(".desktopPhoto:not(:first-child)");
-
-    gsap.set(photos, { yPercent: 101 });
-
-    const allPhotos = gsap.utils.toArray(".desktopPhoto");
-
-    ScrollTrigger.create({
-      trigger: ".gallery",
-      start: "top top",
-      end: "bottom bottom",
-      pin: ".right",
-    });
-
-    details.forEach((detail, index) => {
-      let headline = detail.querySelector("h1");
-      let animation = gsap
-        .timeline()
-        .to(photos[index], { yPercent: 0 })
-        .set(allPhotos[index], { autoAlpha: 0 });
+    this.sectionEnter();
+    this.createSectionScroll();
+  },
+  methods: {
+    sectionEnter() {
       ScrollTrigger.create({
-        trigger: headline,
-        start: "top 80%",
-        end: "top 50%",
-        markers: true,
-        animation: animation,
-        scrub: true,
+        trigger: "#platform-integration",
+        start: "top top",
+        onEnter: () => {
+          this.showLottie = true;
+          console.log("Container in view, Lottie animation triggered!");
+        },
+        markers: false,
       });
-    });
+    },
+    createSectionScroll() {
+      const details = gsap.utils.toArray(
+        ".desktopContentSection:not(:first-child)"
+      );
+      const photos = gsap.utils.toArray(".desktopPhoto:not(:first-child)");
+      const allPhotos = gsap.utils.toArray(".desktopPhoto");
+      gsap.set(photos, { yPercent: 101 });
+
+      ScrollTrigger.create({
+        trigger: ".gallery",
+        start: "top top",
+        end: "bottom bottom",
+        pin: ".right",
+      });
+
+      details.forEach((detail, index) => {
+        let headline = detail.querySelector("h1");
+        let animation = gsap
+          .timeline()
+          .to(photos[index], { yPercent: 0 })
+          .set(allPhotos[index], { autoAlpha: 0 });
+        ScrollTrigger.create({
+          trigger: headline,
+          start: "top 80%",
+          end: "top 50%",
+          markers: false,
+          animation: animation,
+          onEnter: () => this.triggerLottieAnimations(index),
+          scrub: true,
+        });
+
+        this.lottieTriggers.push(false);
+      });
+    },
+    triggerLottieAnimations(index) {
+      this.lottieTriggers[index] = true;
+    },
   },
 };
 </script>
-<style>
-.gallery h1 {
-  font-size: clamp(2em, 4vw, 6em);
-}
-
-.gallery p {
-  font-size: clamp(1.4em, 2.5vw, 3.5em);
-  line-height: 1.4;
-}
-
-.gallery {
-  display: flex;
-}
-
-.left {
-  width: 50%;
-}
-
-.right {
-  height: 100vh;
-
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.desktopContent {
-  margin: auto;
-  width: 80%;
-}
-
-.desktopContentSection {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.desktopPhotos {
-  width: 40vw;
-  height: 40vw;
-  border-radius: 20px;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
-}
-
-.desktopPhoto {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-.red {
-  background: crimson;
-}
-
-.green {
-  background: MediumSeaGreen;
-}
-
-.blue {
-  background: dodgerblue;
-}
-
-.pink {
-  background: deepPink;
-}
-
-/* small screen / mobile layout */
-.mobileContent {
-  display: none;
-  width: 80vw;
-}
-
-.mobilePhoto {
-  width: 80vw;
-  height: 80vw;
-  margin-top: 5em;
-  border-radius: 6vw;
-}
-
-/* defines styles for screens up to 599px wide */
-@media screen and (max-width: 599px) {
-  .left {
-    display: none;
-  }
-
-  .right {
-    height: auto;
-    width: 100%;
-    align-items: center;
-  }
-
-  .desktopPhotos {
-    display: none;
-  }
-
-  .mobileContent {
-    display: block;
-  }
-}
-</style>

@@ -52,23 +52,14 @@
           </div>
           <div class="relative min-h-[400px]">
             <img class="absolute -top-[150px]" src="/background.png" />
-            <img
-              width="200px"
-              class="absolute top-0 right-0 animate-levitate z-40"
-              src="/shape-2.png"
-            />
-            <img
-              width="300px"
-              class="absolute bottom-[-100px] animate-levitate right-[50px] z-10"
-              src="/shape-1.png"
-            />
+
             <div
-              class="max-w-md left-0 top-[120px] p-20 bg-gradient-to-b from-[#101010a9] via-[#171529] to-[#00000085] rounded-2xl z-30"
+              class="max-w-3xl left-0 top-[120px] p-20 bg-gradient-to-b from-[#101010c9] via-[#171529] to-[#000000b6] rounded-2xl z-30"
             >
-              <h6 class="text-lg mb-2 capitalize leading-6 font-bold">
+              <h6 class="text-3xl mb-2 capitalize font-bold">
                 Your technology partner for digital solutions.
               </h6>
-              <p class="text-xs text-gray-300">
+              <p class="text- text-gray-300">
                 Connectivo assists SME companies in optimizing, connecting, and
                 improving their business processes. We are small enough to see,
                 listen, and care about our customers' success, yet big enough to

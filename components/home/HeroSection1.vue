@@ -48,20 +48,20 @@
         </div> -->
       </div>
       <!-- <div>
-        <div
-          class="text-black shadow-lg p-10 rounded-xl mb-12 max-w-2xl mt-10 text-start bg-gradient-to-r from-green-500 via-emerald-500 to-teal-500 mx-auto"
+        <TheCard
+          class="p-10 rounded-3xl mb-12 max-w-2xl mt-10 text-start bg-black mx-auto"
         >
-          <h3 class="text-4xl font-extrabold mb-2 capitalize">
+          <h3 class="text-3xl font-bold mb-2 capitalize">
             Your technology partner for digital solutions.
           </h3>
-          <p class="text-base font-semmibold mt-4">
+          <p class="text-sm text-gray-300">
             Connectivo assists SME companies in optimizing, connecting, and
             improving their business processes. We are small enough to see,
             listen, and care about our customers' success, yet big enough to
             engage, push, and deliver software that allows businesses to reach
             their target goals.
           </p>
-        </div>
+        </TheCard>
       </div> -->
     </div>
   </div>
