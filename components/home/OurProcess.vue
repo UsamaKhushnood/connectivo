@@ -8,23 +8,13 @@
     <!-- Section Content -->
     <div class="container relative z-10 py-[150px]">
       <h1
-        class="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-10 sm:mb-16 md:mb-20"
+        class="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-10 sm:mb-16 md:mb-20 text-center"
       >
         Our <span class="text-primary">Process</span>
       </h1>
       <div>
         <!-- Step 1 -->
-        <div
-          class="relative flex flex-col items-center pb-10"
-          @mouseenter="
-            hoveredPlatform = {
-              name: 'Situation and Strategy Analysis',
-              description:
-                'We conduct market research, analyze documentation, and map strategies based on client needs.',
-            }
-          "
-          @mouseleave="hoveredPlatform = null"
-        >
+        <div class="relative flex flex-col items-center pb-10">
           <div
             class="bg-gradient-to-b from-[#2a462b8a] via-[#101010] border border-green-900 rounded-full p-2 w-20 h-20 flex items-center justify-center mb-4"
           >
@@ -95,7 +85,7 @@
           </div>
         </div>
 
-        <Transition name="fade">
+        <!-- <Transition name="fade">
           <div
             v-if="hoveredPlatform"
             class="fixed bottom-12 right-8 bg-gradient-to-b from-[#101010] via-[#101010] to-[#000000] rounded-2xl border z-10 p-6 md:max-w-2xl"
@@ -103,7 +93,7 @@
             <h2 class="text-2xl font-bold mb-2">{{ hoveredPlatform.name }}</h2>
             <p class="text-gray-400">{{ hoveredPlatform.description }}</p>
           </div>
-        </Transition>
+        </Transition> -->
       </div>
     </div>
   </section>

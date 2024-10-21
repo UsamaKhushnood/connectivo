@@ -9,6 +9,10 @@ import ContactUs from "~/components/home/ContactUs.vue";
     <TheHeader />
     <div class="min-h-dvh"><slot></slot></div>
     <ContactUs />
+    <ContactUs />
+    <ContactUs />
+    <ContactUs />
+    <ContactUs />
     <TheFooter />
   </div>
 </template>

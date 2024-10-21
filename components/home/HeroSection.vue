@@ -63,7 +63,7 @@
               src="/shape-1.png"
             />
             <div
-              class="absolute max-w-md left-0 top-[120px] p-20 bg-gradient-to-b from-[#101010a9] via-[#171529] to-[#00000085] rounded-2xl z-30"
+              class="max-w-md left-0 top-[120px] p-20 bg-gradient-to-b from-[#101010a9] via-[#171529] to-[#00000085] rounded-2xl z-30"
             >
               <h6 class="text-lg mb-2 capitalize leading-6 font-bold">
                 Your technology partner for digital solutions.
@@ -90,5 +90,4 @@
 
 <script setup>
 import { MoveRight } from "lucide-vue-next";
-import TheCard from "@/components/common/TheCard.vue";
 </script>

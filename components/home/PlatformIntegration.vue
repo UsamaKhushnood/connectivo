@@ -3,8 +3,7 @@
     class="relative text-white p-8 md:pt-[350px] md:pb-[150px] overflow-hidden"
   >
     <div
-      class="absolute inset-0 -z-10 transform -skew-y-6 origin-right"
-      style="background: linear-gradient(to bottom, #0d1117, black, #1e2368)"
+      class="absolute inset-0 -z-10 transform -skew-y-6 origin-right bg-gradient-to-r from-gray-800 via-blue-700 to-gray-900"
     >
       <div class="bg-primary w-[500px] h-12 absolute left-0 -top-[50px]">
         <div
